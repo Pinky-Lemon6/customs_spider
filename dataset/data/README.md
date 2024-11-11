@@ -1,12 +1,13 @@
 # Regulations Data Structure
 The file `regulations.json` contains regulatory data crawled from the customs website. The data structure is as follows:
-- **regulations**: An array containing multiple regulation objects, each representing a regulation.
 - **document_type**: A string, the type of the regulation.
-- **category**: A string, the category of the regulation.
+- **category**: A string, the type of the regulation.
 - **announcement_number**: A string, the announcement_number of the regulation.
-- **issuing_authority**: A string, the issuing_authority of the regulation.
+- **issuing_authority**: A string, the authority that issues the regulation.
 - **issue_date**: A string, the date the regulation was published, in the format of `YYYY-MM-DD`.
 - **effective_date**: A string, the date the regulation was effected, in the format of `YYYY-MM-DD`.
+- **status**: A string, the effective status of regulation.
+- **remark**: A string, the supplementary information on the effective status of the regulation.
 - **title**: A string, the title of the regulation.
 - **content**: A string, the specific content of the regulation.
 
