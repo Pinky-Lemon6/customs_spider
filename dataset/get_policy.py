@@ -22,6 +22,11 @@ def create_driver():
     options.add_argument('--lang=zh-CN')
     options.add_argument('--accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
     options.add_argument('--accept-language=zh-CN,zh;q=0.9')
+    # 禁用图片加载
+    prefs = {
+        "profile.managed_default_content_settings.images": 2  # 2 表示禁用图片
+    }
+    options.add_experimental_option("prefs", prefs)    
     driver = uc.Chrome(options=options)
     return driver
 
@@ -35,23 +40,27 @@ def extract_main_content(html_content):
         soup = BeautifulSoup(html_content, 'html.parser')
         
         info_dict = {
-            "question_head": "",  # 问题标题
-            "question_content": "", # 问题内容
-            "category": "",     # 问题类型
-            "awnser": "",  # 回答
+            "title": "",  # 解读标题
+            "content": "", # 解读内容
         }
         
-        # 定位到留言板详情部分
-        board_detail = soup.find('div', class_='easysite-board-detail easysite-border')
+        # 定位到正文处
+        content_div = soup.find('div', class_='easysite-news-text')
         
         # 文本提取
-        if board_detail:
-            info_dict["question_head"] = board_detail.find('span', class_='easysite-detail-key').find_next('div').find('p').get_text(strip=True)
-            info_dict["question_content"] = board_detail.find('span', class_='easysite-detail-key').find_next('div').find('p').find_next('p').get_text(strip=True)
-            info_dict["awnser"] = board_detail.find('span', class_='easysite-detail-key').find_next('div').find('p').find_next('p').find_next('p').get_text(strip=True)
-            return info_dict
-        
-        return None
+        if content_div:
+            if content_div.find('img'):
+                return -1
+            else:
+                info_dict['content'] = content_div.get_text(strip=True)
+                title_div = soup.find('div',class_="easysite-news-title")
+                if title_div:
+                    h2_tag = title_div.find('h2')
+                    title = h2_tag.get_text(strip=True)
+                    info_dict["title"] = title
+                else:
+                    print("No title found in the page")
+                return info_dict
     except Exception as e:
         print(f"提取内容时发生错误: {str(e)}")
         return None
@@ -63,12 +72,12 @@ def open_website(links,style):
     driver.set_page_load_timeout(30)
     driver.set_script_timeout(30)
     driver.delete_all_cookies()  # 清除所有cookies
-    random_sleep()
+    random_sleep(1,2)
     print("第一次跳转：访问百度...")
     driver.get("http://www.baidu.com")
     random_sleep(1,3)
     print("第二次跳转：访问海关首页...")
-    customs_url = "http://gdfs.customs.gov.cn/customs/302249/302266/index.html"
+    customs_url = "http://gdfs.customs.gov.cn/customs/302249/302270/302272/index.html"
     driver.get(customs_url)
     random_sleep(1,3)
     
@@ -79,13 +88,12 @@ def open_website(links,style):
     try:
         # 遍历二级页面
         for url in links:
-            print("访问目标页面...")
             driver.get(url)
             count += 1
-            print("当前页数：{}/{}....\n".format(count,length))
-            random_sleep(0.5,1.5)
+            print("访问目标页面，当前页数：{}/{}....\n".format(count,length))
+            random_sleep(0.3,0.8)
 
-            wait = WebDriverWait(driver, 20)
+            wait = WebDriverWait(driver, 30)
             wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
 
             if len(driver.page_source) > 1000:
@@ -97,17 +105,15 @@ def open_website(links,style):
                             f.write('\n'.join(ret) + '\n')
                 elif style == "second":
                     ret = extract_main_content(html_content)
-                    if ret:
+                    if ret and ret != -1:
                         data.append(ret)
-                    else:
-                        break    
+                        
         if style == "first":
             return 1
         elif style == "second":
             with open('policys.json', 'w', encoding='utf-8') as f:
                 json.dump(data, f, ensure_ascii=False, indent=4)
             return 2
-        
     except Exception as e:
         print(f"发生错误: {e}")
     finally:
@@ -137,27 +143,27 @@ def get_first_url():
         first_url = []
         for i in range(1,107):
             if i<4:
-                prefix = "http://http://gdfs.customs.gov.cn/customs/302249/302270/302272/b600eb6d-"
+                prefix = "http://gdfs.customs.gov.cn/customs/302249/302270/302272/b600eb6d-"
                 suffix = ".html"
             else:
                 prefix = "http://gdfs.customs.gov.cn/eportal/ui?pageId=302272&currentPage="
                 suffix = "&moduleId=b600eb6d22ff4eca8712ae56dd689014&staticRequest=yes"
-        url = prefix + str(i) + suffix    
-        # print(first_url)
-        first_url.append(url)
+            url = prefix + str(i) + suffix    
+            # print(first_url)
+            first_url.append(url)
         return first_url
 
 
 if __name__ == "__main__":
     
     first_urls = get_first_url()
-    ret = open_website(first_urls,"first")
+    # ret = open_website(first_urls,"first")
     
-    if ret == 1:
-        with open('policy_links.txt', 'r') as f:
-            links = f.read().splitlines()
+    # if ret == 1:
+    with open('policy_links.txt', 'r') as f:
+        links = f.read().splitlines()
         
-    ret = open_website(links)
+    ret = open_website(links,"second")
     print(ret)
     
         
