@@ -9,6 +9,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 import random
 import time
+from docx import Document
+import win32com.client
+import PyPDF2
+import pandas as pd
+import warnings
 
 
 
@@ -34,8 +39,74 @@ def create_driver():
 
 def random_sleep(x,y):
     time.sleep(random.uniform(x, y))
+    
+    
+def read_docx(file_path):
+    """读取 .docx 文件并返回文本内容"""
+    try:
+        doc = Document(file_path)
+        text = []
+        for paragraph in doc.paragraphs:
+            text.append(paragraph.text)
+        return '\n'.join(text)
+    except Exception as e:
+        print(f"读取 .docx 文件时发生错误：{e}")
+        return None
+    
 
-def extract_main_content(html_content):
+def read_doc(file_path):
+    """读取 .doc 文件并返回文本内容"""
+    try:
+        # 创建 Word 应用程序对象
+        word = win32com.client.Dispatch("Word.Application")
+        word.Visible = False  # 不显示 Word 窗口
+        doc = word.Documents.Open(file_path)
+        text = doc.Content.Text  # 获取文档内容
+        doc.Close(False)
+        word.Quit()
+
+        return text
+    except Exception as e:
+        print(f"读取 .doc 文件时发生错误：{e}")
+        return None
+    
+    
+def read_pdf(file_path):
+    """读取 PDF 文件并返回文本内容"""
+    try:
+        with open(file_path, 'rb') as file:
+            reader = PyPDF2.PdfReader(file)
+            text = []
+            for page in reader.pages:
+                text.append(page.extract_text())
+            return '\n'.join(text)
+    except Exception as e:
+        print(f"读取 PDF 文件时发生错误：{e}")
+        return None
+ 
+ 
+def read_excel(file_path):
+    """读取 Excel 文件并返回文本内容"""
+    try:
+        warnings.filterwarnings("ignore", category=UserWarning)  # 忽略 UserWarning
+        if file_path.endswith('.xls'):
+            df = pd.read_excel(file_path, engine='xlrd')  # 处理 .xls 文件
+        else:
+            df = pd.read_excel(file_path, engine='openpyxl')  # 处理 .xlsx 文件
+        
+        # 检查 DataFrame 是否为空
+        if df.empty:
+            print(f"警告: 文件 {file_path} 中没有数据。")
+            return None
+        
+        return df.to_string(index=False)  # 返回 DataFrame 的字符串表示
+    except Exception as e:
+        print(f"读取 Excel 文件时发生错误：{e}")
+        return None   
+    
+    
+
+def extract_main_content(html_content,data):
     """提取网页主要内容"""
     try:
         soup = BeautifulSoup(html_content, 'html.parser')
@@ -51,6 +122,7 @@ def extract_main_content(html_content):
             "remarks": "",              # 效力说明
             "title":"",                 # 标题
             "content": "" ,              # 内容
+            "appendix":""               # 附件
         }
         
         # 查找所有的 hgfg_list
@@ -89,12 +161,15 @@ def extract_main_content(html_content):
         else:
             print("No title found in the page")
         
-        # 读取法规内容
+        # 读取法规内容并获取附件
         news_div = soup.find('div',class_="easysite-news-content")
         if news_div:
             news_content = news_div.get_text(strip=True)
-            news_content = re.split(r'公告下载链接|规章文本下载链接|公告正文下载链接|浏览次数', news_content)[0].strip()
+            news_content = re.split(r'公告下载链接|规章文本下载链接|公告正文下载链接|浏览次数|附件：', news_content)[0].strip()
             info_dict["content"] = news_content
+            # 提取附件内容
+            appendix = get_appendix(html_content,data)
+            info_dict["appendix"] = appendix
             return info_dict
         else:
             print("No content found in the page")
@@ -105,23 +180,14 @@ def extract_main_content(html_content):
         return None
 
 
-def extract_links_and_download(html_content):
+def get_appendix(html_content, data):
     # try:
     soup = BeautifulSoup(html_content, 'html.parser')
-    # 判断当前法规是否有效
-    hgzs_lis4_div = soup.find('div', class_='hgzs_lis4')
-    if hgzs_lis4_div:
-        hgfg_list_div = hgzs_lis4_div.find('div', class_='hgfg_list')
-        if hgfg_list_div:
-            span = hgfg_list_div.find('span')
-            if span:
-                status = hgfg_list_div.get_text(strip=True).replace(span.get_text(strip=True), '').strip()
-                if status != '有效':
-                    print("该法规已失效")
-                    return 2
     
     # 提取附件链接
     news_div = soup.find('div',class_="easysite-news-content")
+    appendix_content = ""
+    
     if news_div:
         p_tags = news_div.find_all('p')
         # links = []
@@ -133,50 +199,64 @@ def extract_links_and_download(html_content):
                 if not link.startswith('http'):
                     link = 'http://gdfs.customs.gov.cn' + link
                     # print(link)
-                    file_name = a_tag.get_text(strip=True)
-                    # 检查 file_name 是否包含有效的后缀
-                    if not file_name.endswith('.doc') and not file_name.endswith('.docx'):
-                        file_name += '.doc'  # 默认添加 .doc 后缀  
-                    download_file(link, file_name)
-                    random_sleep(0.8,1.3)
+                file_name = a_tag.get_text(strip=True)
+                # 检查 file_name 是否包含有效的后缀
+                valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff', '.rar']  
+                if not any(file_name.endswith(ext) for ext in valid_extensions):
+                        # 暂存 data 到 temp.json
+                        with open('temp.json', 'w', encoding='utf-8') as json_file:
+                            json.dump(data, json_file, ensure_ascii=False, indent=4)
+                        
+                        new_file_name = input(f"文件名 '{file_name}' 不包含有效后缀，请输入正确的文件名: ")
+                        # 检查新输入的文件名
+                        if new_file_name.endswith('.tiff') or new_file_name.endswith('.rar'):
+                            print(f"文件 '{new_file_name}' 不进行下载。")
+                            continue  # 跳过下载
+                        
+                        file_name = new_file_name
+                 
+                download_file(link, file_name)
+                # random_sleep(0.8,1.3)
+                
+                # 构建完整的文件路径
+                downloaded_file_path = os.path.join('temp', file_name)
+                
+                # 读取 .docx 文件内容
+                if file_name.endswith('.docx'):
+                    text_content = read_docx(downloaded_file_path)                    
+                # 读取 .doc 文件内容
+                elif file_name.endswith('.doc'):
+                    text_content = read_doc(downloaded_file_path)    
+                # 读取 .pdf 文件内容
+                elif file_name.endswith('.pdf'):
+                    text_content = read_pdf(downloaded_file_path)
+                # 读取 .xls 和 .xlsx 文件内容
+                elif file_name.endswith('.xls') or file_name.endswith('.xlsx'):
+                    text_content = read_excel(downloaded_file_path)
+                else:
+                    text_content = None
+                    
+                if text_content:
+                    appendix_content += text_content + "\n"
+                        
+                # 删除下载的文件
+                os.remove(downloaded_file_path)            
                 # links.append(link)
             # else:
             #     print("No appendix found in the page")
             #     return None
             if re.search(r'公告下载链接|规章文本下载链接|公告正文下载链接', p.get_text()):
                 break
-        return 1
+            
+        return appendix_content
     else:
         print("No content found in the page")
-        # print(response)
         return None
     # except Exception as e:
     #     print(f"提取内容时发生错误: {str(e)}")
     #     return None
     
-
-def open_website(links,mode):
-
-    driver = create_driver()
-    print(driver)
-    driver.set_page_load_timeout(30)
-    driver.set_script_timeout(30)
-    driver.delete_all_cookies()  # 清除所有cookies
-    # random_sleep()
-    print("第一次跳转：访问百度...")
-    driver.get("http://www.baidu.com")
-    random_sleep(1,3)
-    print("第二次跳转：访问海关首页...")
-    customs_url = "http://gdfs.customs.gov.cn/customs/302249/index.html"
-    driver.get(customs_url)
-    random_sleep(1,3)
     
-    if mode == "content":
-        get_content(links,driver)
-    elif mode == "appendix":
-        get_appendix(links,driver)
-    
-        
 def get_content(links,driver):
     data = []
     
@@ -197,7 +277,7 @@ def get_content(links,driver):
 
             if len(driver.page_source) > 1000:
                 html_content = driver.page_source
-                ret = extract_main_content(html_content)
+                ret = extract_main_content(html_content,data)
                 # print(ret)
                 if ret:
                     data.append(ret)
@@ -209,48 +289,32 @@ def get_content(links,driver):
     except Exception as e:
         print(f"发生错误: {e}")
     finally:
-        driver.quit()
+        driver.quit()    
+    
+
+def open_website(links):
+
+    driver = create_driver()
+    print(driver)
+    driver.set_page_load_timeout(30)
+    driver.set_script_timeout(30)
+    driver.delete_all_cookies()  # 清除所有cookies
+    # random_sleep()
+    print("第一次跳转：访问百度...")
+    driver.get("http://www.baidu.com")
+    random_sleep(1,3)
+    print("第二次跳转：访问海关首页...")
+    customs_url = "http://gdfs.customs.gov.cn/customs/302249/index.html"
+    driver.get(customs_url)
+    random_sleep(1,3)
+    
+    get_content(links,driver)
+    
         
-
-def get_appendix(links,driver):
-    # 统计进度
-    length = len(links)
-    # link = ["http://gdfs.customs.gov.cn/customs/302249/302266/302267/6162604/index.html"]
-    count = 0
-    try:
-        # 遍历二级页面
-        for url in links:
-            # print("访问目标页面...")
-            driver.get(url)
-            count += 1
-            print("访问目标页面，当前页数：{}/{}....\n".format(count,length))
-            random_sleep(0.1,0.3)
-
-            wait = WebDriverWait(driver, 20)
-            wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-
-            if len(driver.page_source) > 1000:
-                html_content = driver.page_source
-                ret = extract_links_and_download(html_content)
-                # print(ret)
-                if ret == 1:
-                    print("Get appendix")
-                    # data.append(ret)
-                    # driver.close()
-                else:
-                    break   
-        
-    except Exception as e:
-        print(f"发生错误: {e}")
-    finally:
-        driver.quit()
-
-        
-
 def download_file(url, file_name):
     """下载文件并保存到本地"""
-    # 创建 appendix 文件夹（如果不存在）
-    folder_path = 'appendix'
+    # 创建temp文件夹（如果不存在）
+    folder_path = 'temp'
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
@@ -281,15 +345,16 @@ def download_file(url, file_name):
     except Exception as e:
         print(f"下载文件时发生错误: {e}")
         
-        
-
 
 if __name__ == "__main__":
     
-    with open('relinks.txt', 'r') as f:
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    links_file_path = os.path.join(current_dir, 'link_test.txt')
+    
+    with open(links_file_path, 'r') as f:
         links = f.read().splitlines()
         
-    ret = open_website(links,mode="appendix")
+    ret = open_website(links)
     print(ret)
 
     
