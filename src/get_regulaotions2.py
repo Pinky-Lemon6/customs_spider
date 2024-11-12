@@ -217,7 +217,12 @@ def get_appendix(html_content, data):
                     #             continue  # 跳过下载
                             
                     #         file_name = new_file_name
+                    
                     file_name = os.path.basename(link)
+                    # 不包含有效后缀则不下载
+                    valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf']
+                    if not any(file_name.endswith(ext) for ext in valid_extensions):
+                        continue 
                     
                     Flag = download_file(link)
                     # random_sleep(0.8,1.3)
@@ -299,6 +304,8 @@ def get_content(links,driver):
             json.dump(data, f,ensure_ascii=False, indent=4)
     except Exception as e:
         print(f"发生错误: {e}")
+        with open('temp.json', 'w', encoding='utf-8') as json_file:
+            json.dump(data, json_file, ensure_ascii=False, indent=4)
     finally:
         driver.quit()    
     
