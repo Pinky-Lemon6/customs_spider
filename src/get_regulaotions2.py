@@ -178,85 +178,94 @@ def extract_main_content(html_content,data):
         return None
     except Exception as e:
         print(f"提取内容时发生错误: {str(e)}")
+        with open('temp.json', 'w', encoding='utf-8') as json_file:
+            json.dump(data, json_file, ensure_ascii=False, indent=4)
         return None
 
 
 def get_appendix(html_content, data):
-    # try:
-    soup = BeautifulSoup(html_content, 'html.parser')
-    
-    # 提取附件链接
-    news_div = soup.find('div',class_="easysite-news-content")
-    appendix_content = ""
-    
-    if news_div:
-        p_tags = news_div.find_all('p')
-        # links = []
-        for p in p_tags:
-            a_tag = p.find('a',href = True)
-            # print(a_tag)
-            if a_tag:
-                link = a_tag['href']
-                if not link.startswith('http'):
-                    link = 'http://gdfs.customs.gov.cn' + link
-                    # print(link)
-                # file_name = a_tag.get_text(strip=True)
-                # # 检查 file_name 是否包含有效的后缀
-                # valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff', '.rar']  
-                # if not any(file_name.endswith(ext) for ext in valid_extensions):
-                #         # 暂存 data 到 temp.json
-                #         with open('temp.json', 'w', encoding='utf-8') as json_file:
-                #             json.dump(data, json_file, ensure_ascii=False, indent=4)
-                        
-                #         new_file_name = input(f"文件名 '{file_name}' 不包含有效后缀，请输入正确的文件名: ")
-                #         # 检查新输入的文件名
-                #         if new_file_name.endswith('.tiff') or new_file_name.endswith('.rar'):
-                #             print(f"文件 '{new_file_name}' 不进行下载。")
-                #             continue  # 跳过下载
-                        
-                #         file_name = new_file_name
-                file_name = os.path.basename(link)
-                 
-                download_file(link)
-                # random_sleep(0.8,1.3)
-                
-                # 构建完整的文件路径
-                downloaded_file_path = os.path.join('temp', file_name)
-                
-                # 读取 .docx 文件内容
-                if file_name.endswith('.docx'):
-                    text_content = read_docx(downloaded_file_path)                    
-                # 读取 .doc 文件内容
-                elif file_name.endswith('.doc'):
-                    text_content = read_doc(downloaded_file_path)    
-                # 读取 .pdf 文件内容
-                elif file_name.endswith('.pdf'):
-                    text_content = read_pdf(downloaded_file_path)
-                # 读取 .xls 和 .xlsx 文件内容
-                elif file_name.endswith('.xls') or file_name.endswith('.xlsx'):
-                    text_content = read_excel(downloaded_file_path)
-                else:
-                    text_content = None
+    try:
+        soup = BeautifulSoup(html_content, 'html.parser')
+        
+        # 提取附件链接
+        news_div = soup.find('div',class_="easysite-news-content")
+        appendix_content = ""
+        
+        if news_div:
+            p_tags = news_div.find_all('p')
+            # links = []
+            for p in p_tags:
+                a_tag = p.find('a',href = True)
+                # print(a_tag)
+                if a_tag:
+                    link = a_tag['href']
+                    if not link.startswith('http'):
+                        link = 'http://gdfs.customs.gov.cn' + link
+                        # print(link)
+                    # file_name = a_tag.get_text(strip=True)
+                    # # 检查 file_name 是否包含有效的后缀
+                    # valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff', '.rar']  
+                    # if not any(file_name.endswith(ext) for ext in valid_extensions):
+                    #         # 暂存 data 到 temp.json
+                    #         with open('temp.json', 'w', encoding='utf-8') as json_file:
+                    #             json.dump(data, json_file, ensure_ascii=False, indent=4)
+                            
+                    #         new_file_name = input(f"文件名 '{file_name}' 不包含有效后缀，请输入正确的文件名: ")
+                    #         # 检查新输入的文件名
+                    #         if new_file_name.endswith('.tiff') or new_file_name.endswith('.rar'):
+                    #             print(f"文件 '{new_file_name}' 不进行下载。")
+                    #             continue  # 跳过下载
+                            
+                    #         file_name = new_file_name
+                    file_name = os.path.basename(link)
                     
-                if text_content:
-                    appendix_content += text_content + "\n"
+                    Flag = download_file(link)
+                    # random_sleep(0.8,1.3)
+                    if Flag == True:
+                        # 构建完整的文件路径
+                        downloaded_file_path = os.path.join('temp', file_name)
                         
-                # 删除下载的文件
-                os.remove(downloaded_file_path)            
-                # links.append(link)
-            # else:
-            #     print("No appendix found in the page")
-            #     return None
-            if re.search(r'公告下载链接|规章文本下载链接|公告正文下载链接', p.get_text()):
-                break
-            
-        return appendix_content
-    else:
-        print("No content found in the page")
+                        # 读取 .docx 文件内容
+                        if file_name.endswith('.docx'):
+                            text_content = read_docx(downloaded_file_path)                    
+                        # 读取 .doc 文件内容
+                        elif file_name.endswith('.doc'):
+                            current_dir = os.getcwd()
+                            downloaded_file_path = current_dir +'\\'+ downloaded_file_path
+                            text_content = read_doc(downloaded_file_path)    
+                        # 读取 .pdf 文件内容
+                        elif file_name.endswith('.pdf'):
+                            text_content = read_pdf(downloaded_file_path)
+                        # 读取 .xls 和 .xlsx 文件内容
+                        elif file_name.endswith('.xls') or file_name.endswith('.xlsx'):
+                            text_content = read_excel(downloaded_file_path)
+                        else:
+                            text_content = None
+                            
+                        if text_content:
+                            appendix_content += text_content + "\n"
+                                
+                        # 删除下载的文件
+                        os.remove(downloaded_file_path)
+                    else:
+                        print("Download Error!Try again!")   
+                        return None         
+                    # links.append(link)
+                # else:
+                #     print("No appendix found in the page")
+                #     return None
+                if re.search(r'公告下载链接|规章文本下载链接|公告正文下载链接', p.get_text()):
+                    break
+                
+            return appendix_content
+        else:
+            print("No content found in the page")
+            return None
+    except Exception as e:
+        print(f"提取附件数据时发生错误: {str(e)}")
+        with open('temp.json', 'w', encoding='utf-8') as json_file:
+            json.dump(data, json_file, ensure_ascii=False, indent=4)
         return None
-    # except Exception as e:
-    #     print(f"提取内容时发生错误: {str(e)}")
-    #     return None
     
     
 def get_content(links,driver):
@@ -344,7 +353,19 @@ def download_file(url):
         with open(file_path, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
                 f.write(chunk)
-        print(f"文件已下载: {file_name}")
+                
+        # 等待直到文件下载完成
+        while not os.path.exists(file_path):
+            print(f"等待文件下载完成: {file_name}")
+            time.sleep(0.3)  # 每秒检查一次
+            
+        # 检查文件是否成功下载
+        if os.path.exists(file_path):
+            print(f"文件已下载: {file_name}")
+            return True
+        else:
+            print(f"文件下载失败: {file_name}")
+            return False
     except Exception as e:
         print(f"下载文件时发生错误: {e}")
         
@@ -352,7 +373,7 @@ def download_file(url):
 if __name__ == "__main__":
     
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    links_file_path = os.path.join(current_dir, 'link_test.txt')
+    links_file_path = os.path.join(current_dir, 'regulations_links.txt')
     
     with open(links_file_path, 'r') as f:
         links = f.read().splitlines()
