@@ -21,6 +21,7 @@ The file `regulations.json` contains regulatory data crawled from the customs we
 - **remark**: A string, the supplementary information on the effective status of the regulation.
 - **title**: A string, the title of the regulation.
 - **content**: A string, the specific content of the regulation.
+- **appendix**: A string, the content of the appendix of the regulation.
 
 ## Example
 ```json
@@ -35,7 +36,8 @@ The file `regulations.json` contains regulatory data crawled from the customs we
         "status": "有效",
         "remarks": "",
         "title": "海关总署公告2023年第199号（关于推进《内地海关及香港海关陆路进/出境载货清单》无纸化工作的公告）",
-        "content": "为促进内港两地经济发展，方便两地经贸往来，进一步简化海关监管手续，海关总署决定进一步推进《内地海关及香港海关陆路进/出境载货清单》（以下简称《载货清单》）无纸化工作。现就有关事项公告如下：企业在向内地海关办理内地、香港陆路货运车辆（含货运空车）和所载货物各项通关监管手续时，无需提交纸质《载货清单》。《载货清单》的其他相关事项仍按照海关总署公告2004年第42号执行。本公告自2024年2月1日起施行。特此公告。海关总署2023年12月29日"
+        "content": "为促进内港两地经济发展，方便两地经贸往来，进一步简化海关监管手续，海关总署决定进一步推进《内地海关及香港海关陆路进/出境载货清单》（以下简称《载货清单》）无纸化工作。现就有关事项公告如下：企业在向内地海关办理内地、香港陆路货运车辆（含货运空车）和所载货物各项通关监管手续时，无需提交纸质《载货清单》。《载货清单》的其他相关事项仍按照海关总署公告2004年第42号执行。本公告自2024年2月1日起施行。特此公告。海关总署2023年12月29日",
+        "appendix":""
     }
 ]
 ```
