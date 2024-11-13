@@ -122,9 +122,9 @@ def extract_main_content(html_content,data):
             "remarks": "",              # 效力说明
             "title":"",                 # 标题
             "content": "" ,              # 内容
-            "appendix":""               # 附件
+            "appendix_content": "",      # 附件内容
+            "appendix": []              # 附件          
         }
-        
         
         # 查找所有的 hgfg_list
         hgfg_lists = soup.find_all('div', class_='hgfg_list')
@@ -166,10 +166,11 @@ def extract_main_content(html_content,data):
         news_div = soup.find('div',class_="easysite-news-content")
         if news_div:
             news_content = news_div.get_text(strip=True)
-            news_content = re.split(r'公告下载链接|规章文本下载链接|公告正文下载链接|浏览次数|附件：', news_content)[0].strip()
+            news_content = re.split(r'公告下载链接|规章文本下载链接|公告正文下载链接|公告原文下载链接|公告下载正文链接|浏览次数|附件：', news_content)[0].strip()
             info_dict["content"] = news_content
             # 提取附件内容
-            appendix = get_appendix(html_content,data)
+            appendix_content,appendix = get_appendix(html_content,data)
+            info_dict["appendix_content"] = appendix_content
             info_dict["appendix"] = appendix
             return info_dict
         else:
@@ -178,7 +179,7 @@ def extract_main_content(html_content,data):
         return None
     except Exception as e:
         print(f"提取内容时发生错误: {str(e)}")
-        with open('temp.json', 'w', encoding='utf-8') as json_file:
+        with open('temp.json', 'a', encoding='utf-8') as json_file:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
         return None
 
@@ -190,6 +191,7 @@ def get_appendix(html_content, data):
         # 提取附件链接
         news_div = soup.find('div',class_="easysite-news-content")
         appendix_content = ""
+        appendix = []
         
         if news_div:
             p_tags = news_div.find_all('p')
@@ -202,33 +204,30 @@ def get_appendix(html_content, data):
                     if not link.startswith('http'):
                         link = 'http://gdfs.customs.gov.cn' + link
                         # print(link)
-                    # file_name = a_tag.get_text(strip=True)
-                    # # 检查 file_name 是否包含有效的后缀
-                    # valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff', '.rar']  
-                    # if not any(file_name.endswith(ext) for ext in valid_extensions):
-                    #         # 暂存 data 到 temp.json
-                    #         with open('temp.json', 'w', encoding='utf-8') as json_file:
-                    #             json.dump(data, json_file, ensure_ascii=False, indent=4)
-                            
-                    #         new_file_name = input(f"文件名 '{file_name}' 不包含有效后缀，请输入正确的文件名: ")
-                    #         # 检查新输入的文件名
-                    #         if new_file_name.endswith('.tiff') or new_file_name.endswith('.rar'):
-                    #             print(f"文件 '{new_file_name}' 不进行下载。")
-                    #             continue  # 跳过下载
-                            
-                    #         file_name = new_file_name
-                    
-                    file_name = os.path.basename(link)
-                    # 不包含有效后缀则不下载
-                    valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf']
+                    file_name = a_tag.get_text(strip=True)
+                    # 确保文件名合法
+                    file_name = file_name.replace('/', '_').replace('\\', '_')  # 替换非法字符
+                    # 检查 file_name 是否包含有效的后缀
+                    valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff', '.rar']  
                     if not any(file_name.endswith(ext) for ext in valid_extensions):
-                        continue 
+                            # 暂存 data 到 temp.json
+                            with open('temp.json', 'a', encoding='utf-8') as json_file:
+                                json.dump(data, json_file, ensure_ascii=False, indent=4)
+                            
+                            new_file_name = input(f"文件名 '{file_name}' 不包含有效后缀，请输入正确的文件名: ")
+                            # 检查新输入的文件名
+                            # if new_file_name.endswith('.tiff') or new_file_name.endswith('.rar'):
+                            #     print(f"文件 '{new_file_name}' 不进行下载。")
+                            #     continue  # 跳过下载
+                            file_name = new_file_name
+                     
+                    appendix.append(file_name)
                     
-                    Flag = download_file(link)
+                    Flag = download_file(link,file_name)
                     # random_sleep(0.8,1.3)
                     if Flag == True:
                         # 构建完整的文件路径
-                        downloaded_file_path = os.path.join('temp', file_name)
+                        downloaded_file_path = os.path.join('appendix', file_name)
                         
                         # 读取 .docx 文件内容
                         if file_name.endswith('.docx'):
@@ -251,7 +250,7 @@ def get_appendix(html_content, data):
                             appendix_content += text_content + "\n"
                                 
                         # 删除下载的文件
-                        os.remove(downloaded_file_path)
+                        # os.remove(downloaded_file_path)
                     else:
                         print("Download Error!Try again!")   
                         return None         
@@ -259,16 +258,15 @@ def get_appendix(html_content, data):
                 # else:
                 #     print("No appendix found in the page")
                 #     return None
-                if re.search(r'公告下载链接|规章文本下载链接|公告正文下载链接', p.get_text()):
-                    break
-                
-            return appendix_content
+                if re.search(r'公告下载链接|规章文本下载链接|公告正文下载链接|公告原文下载链接|公告下载正文链接', p.get_text()):
+                    break    
+            return appendix_content,appendix
         else:
             print("No content found in the page")
             return None
     except Exception as e:
         print(f"提取附件数据时发生错误: {str(e)}")
-        with open('temp.json', 'w', encoding='utf-8') as json_file:
+        with open('temp.json', 'a', encoding='utf-8') as json_file:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
         return None
     
@@ -300,11 +298,11 @@ def get_content(links,driver):
                     # driver.close()
                 else:
                     break   
-        with open('regulations.json', 'w', encoding='utf-8') as f:
+        with open('regulations.json', 'a', encoding='utf-8') as f:
             json.dump(data, f,ensure_ascii=False, indent=4)
     except Exception as e:
         print(f"发生错误: {e}")
-        with open('temp.json', 'w', encoding='utf-8') as json_file:
+        with open('temp.json', 'a', encoding='utf-8') as json_file:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
     finally:
         driver.quit()    
@@ -329,23 +327,22 @@ def open_website(links):
     get_content(links,driver)
     
         
-def download_file(url):
+def download_file(url,file_name):
     """下载文件并保存到本地"""
     # 创建temp文件夹（如果不存在）
-    folder_path = 'temp'
+    folder_path = 'appendix'
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
     # 构建完整的文件路径
-    file_name = os.path.basename(url)  # 从 URL 中提取文件名
     file_path = os.path.join(folder_path, file_name)
     
-    # # 检查是否存在同名文件，如果存在则重新命名
-    # base_name, extension = os.path.splitext(file_name)
-    # counter = 1
-    # while os.path.exists(file_path):
-    #     file_path = os.path.join(folder_path, f"{base_name}_{counter}{extension}")
-    #     counter += 1
+    # 检查是否存在同名文件，如果存在则重新命名
+    base_name, extension = os.path.splitext(file_name)
+    counter = 1
+    while os.path.exists(file_path):
+        file_path = os.path.join(folder_path, f"{base_name}_{counter}{extension}")
+        counter += 1
         
     headers = {
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0"
@@ -355,8 +352,9 @@ def download_file(url):
         response = requests.get(url, stream=True,headers=headers)
         response.raise_for_status()  # 检查请求是否成功
 
-        # 确保文件名合法
-        file_name = file_name.replace('/', '_').replace('\\', '_')  # 替换非法字符
+        # # 确保文件名合法
+        # file_path = file_path.replace('/', '_').replace('\\', '_')  # 替换非法字符
+        
         with open(file_path, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
                 f.write(chunk)
@@ -380,7 +378,7 @@ def download_file(url):
 if __name__ == "__main__":
     
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    links_file_path = os.path.join(current_dir, 'regulations_links.txt')
+    links_file_path = os.path.join(current_dir, 'relinks.txt')
     
     with open(links_file_path, 'r') as f:
         links = f.read().splitlines()
