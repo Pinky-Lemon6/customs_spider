@@ -213,23 +213,29 @@ def get_appendix(html_content, data):
                     file_name = file_name.replace('/', '_').replace('\\', '_') 
                     
                     # 检查 file_name 是否包含有效的后缀
-                    valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff','.tif', '.rar','.zip']
+                    valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff','.tif', '.rar','.zip','jpg','png']
                     invalid_urls = ['www.customs.gov.cn','http:__online.customs.gov.cn','http:__ocr.customs.gov.cn','http:__','http:__www.customs.gov.cn','http:__ceb2.chinaport.gov.cn','www.chinaport.gov.cn','“@”+16','“@”+8','“@”+13','http:__pre.chinaport.gov.cn_car','http:__202.127.48.148_','http:__credit.customs.gov.cn','www.chinacustomsstat.com'
                     ]  
                     if not any(file_name.endswith(ext) for ext in valid_extensions):
                             # 抓取到的是网址
                             if file_name in invalid_urls:
                                 continue
-                            # 暂存 data 到 temp.json
-                            with open('temp.json', 'w', encoding='utf-8') as json_file:
-                                json.dump(data, json_file, ensure_ascii=False, indent=4)
                             
-                            new_file_name = input(f"文件名 '{file_name}' 不包含有效后缀，请输入正确的文件名: ")
-                            # 取消下载该文件
-                            if new_file_name == 'cancel':
-                                continue
+                            # 从 URL 中提取文件后缀
+                            file_extension = os.path.splitext(link)[1]  # 获取文件后缀
+                            if file_extension in valid_extensions:  # 如果是有效后缀
+                                file_name += file_extension  # 将后缀添加到文件名后面
                             
-                            file_name = new_file_name
+                            else:
+                                # 暂存 data 到 temp.json
+                                with open('temp.json', 'w', encoding='utf-8') as json_file:
+                                    json.dump(data, json_file, ensure_ascii=False, indent=4)
+                                new_file_name = input(f"文件名 '{file_name}' 不包含有效后缀，请输入正确的文件名: ")
+                                # 取消下载该文件
+                                if new_file_name == 'cancel':
+                                    continue
+                            
+                                file_name = new_file_name
                     appendix.append(file_name)
                     
                     Flag = download_file(link,file_name)
