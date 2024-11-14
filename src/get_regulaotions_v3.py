@@ -195,7 +195,6 @@ def get_appendix(html_content, data):
         
         if news_div:
             p_tags = news_div.find_all('p')
-            # links = []
             for p in p_tags:
                 a_tags = p.find_all('a', href=True)
                 # print(a_tag)
@@ -213,8 +212,8 @@ def get_appendix(html_content, data):
                     file_name = file_name.replace('/', '_').replace('\\', '_') 
                     
                     # 检查 file_name 是否包含有效的后缀
-                    valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff','.tif', '.rar','.zip','jpg','png']
-                    invalid_urls = ['www.customs.gov.cn','http:__online.customs.gov.cn','http:__ocr.customs.gov.cn','http:__','http:__www.customs.gov.cn','http:__ceb2.chinaport.gov.cn','www.chinaport.gov.cn','“@”+16','“@”+8','“@”+13','http:__pre.chinaport.gov.cn_car','http:__202.127.48.148_','http:__credit.customs.gov.cn','www.chinacustomsstat.com'
+                    valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff','.tif', '.rar','.zip','.jpg','.png']
+                    invalid_urls = ['www.customs.gov.cn','http:__online.customs.gov.cn','http:__ocr.customs.gov.cn','http:__','http:__www.customs.gov.cn','http:__ceb2.chinaport.gov.cn','www.chinaport.gov.cn','“@”+16','“@”+8','“@”+13','http:__pre.chinaport.gov.cn_car','http:__202.127.48.148_','http:__credit.customs.gov.cn','www.chinacustomsstat.com','szsda@163.com','http:__bgy.customs.gov.cn'
                     ]  
                     if not any(file_name.endswith(ext) for ext in valid_extensions):
                             # 抓取到的是网址
@@ -222,9 +221,9 @@ def get_appendix(html_content, data):
                                 continue
                             
                             # 从 URL 中提取文件后缀
-                            file_extension = os.path.splitext(link)[1]  # 获取文件后缀
-                            if file_extension in valid_extensions:  # 如果是有效后缀
-                                file_name += file_extension  # 将后缀添加到文件名后面
+                            file_extension = os.path.splitext(link)[1]  
+                            if file_extension in valid_extensions:  
+                                file_name += file_extension  
                             
                             else:
                                 # 暂存 data 到 temp.json
@@ -295,7 +294,6 @@ def get_content(links,driver):
     try:
         # 遍历二级页面
         for url in links:
-            # print("访问目标页面...")
             driver.get(url)
             count += 1
             print("访问目标页面，当前页数：{}/{}....\n".format(count,length))
@@ -313,7 +311,7 @@ def get_content(links,driver):
                     # driver.close()
                 else:
                     break   
-        with open('regulations_5.json', 'w', encoding='utf-8') as f:
+        with open('regulations_6.json', 'w', encoding='utf-8') as f:
             json.dump(data, f,ensure_ascii=False, indent=4)
     except Exception as e:
         print(f"发生错误: {e}")
@@ -330,7 +328,7 @@ def open_website(links):
     driver.set_page_load_timeout(30)
     driver.set_script_timeout(30)
     driver.delete_all_cookies()  # 清除所有cookies
-    # random_sleep()
+    
     print("第一次跳转：访问百度...")
     driver.get("http://www.baidu.com")
     random_sleep(1,3)
@@ -366,9 +364,6 @@ def download_file(url,file_name):
         
         response = requests.get(url, stream=True,headers=headers)
         response.raise_for_status()  # 检查请求是否成功
-
-        # # 确保文件名合法
-        # file_path = file_path.replace('/', '_').replace('\\', '_')  # 替换非法字符
         
         with open(file_path, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
@@ -390,7 +385,7 @@ def download_file(url,file_name):
         # 检查是否是 404 错误
         if response.status_code == 404:
             print(f"404 错误: 文件未找到，忽略该错误: {url}")
-            return True  # 或者根据需要返回其他值
+            return True  
         else:
             print(f"下载文件时发生 HTTP 错误: {http_err}")
             return False
@@ -402,7 +397,7 @@ def download_file(url,file_name):
 if __name__ == "__main__":
     
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    links_file_path = os.path.join(current_dir, 'relinks.txt')
+    links_file_path = os.path.join(current_dir, 'regulations_links.txt')
     
     with open(links_file_path, 'r') as f:
         links = f.read().splitlines()
