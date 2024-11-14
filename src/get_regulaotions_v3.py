@@ -201,9 +201,14 @@ def get_appendix(html_content, data):
                 # print(a_tag)
                 if a_tag:
                     link = a_tag['href']
+                        
                     if not link.startswith('http'):
                         link = 'http://gdfs.customs.gov.cn' + link
                         # print(link)
+                    # 处理 link，如果以 http://www 开头，则替换为 http://gdfs
+                    if link.startswith('http://www'):
+                        link = link.replace('www', 'gdfs', 1) 
+                    
                     file_name = a_tag.get_text(strip=True)
                     # 确保文件名合法
                     file_name = file_name.replace('/', '_').replace('\\', '_')  # 替换非法字符
