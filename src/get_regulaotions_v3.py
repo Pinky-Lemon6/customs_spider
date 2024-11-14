@@ -179,7 +179,7 @@ def extract_main_content(html_content,data):
         return None
     except Exception as e:
         print(f"提取内容时发生错误: {str(e)}")
-        with open('temp.json', 'a', encoding='utf-8') as json_file:
+        with open('temp.json', 'w', encoding='utf-8') as json_file:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
         return None
 
@@ -216,10 +216,13 @@ def get_appendix(html_content, data):
                     valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff', '.rar']  
                     if not any(file_name.endswith(ext) for ext in valid_extensions):
                             # 暂存 data 到 temp.json
-                            with open('temp.json', 'a', encoding='utf-8') as json_file:
+                            with open('temp.json', 'w', encoding='utf-8') as json_file:
                                 json.dump(data, json_file, ensure_ascii=False, indent=4)
                             
                             new_file_name = input(f"文件名 '{file_name}' 不包含有效后缀，请输入正确的文件名: ")
+                            # 取消下载该文件
+                            if new_file_name == 'cancel':
+                                continue
                             # 检查新输入的文件名
                             # if new_file_name.endswith('.tiff') or new_file_name.endswith('.rar'):
                             #     print(f"文件 '{new_file_name}' 不进行下载。")
@@ -271,7 +274,7 @@ def get_appendix(html_content, data):
             return None
     except Exception as e:
         print(f"提取附件数据时发生错误: {str(e)}")
-        with open('temp.json', 'a', encoding='utf-8') as json_file:
+        with open('temp.json', 'w', encoding='utf-8') as json_file:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
         return None
     
@@ -303,11 +306,11 @@ def get_content(links,driver):
                     # driver.close()
                 else:
                     break   
-        with open('regulations.json', 'a', encoding='utf-8') as f:
+        with open('regulations.json', 'w', encoding='utf-8') as f:
             json.dump(data, f,ensure_ascii=False, indent=4)
     except Exception as e:
         print(f"发生错误: {e}")
-        with open('temp.json', 'a', encoding='utf-8') as json_file:
+        with open('temp.json', 'w', encoding='utf-8') as json_file:
             json.dump(data, json_file, ensure_ascii=False, indent=4)
     finally:
         driver.quit()    
@@ -383,7 +386,7 @@ def download_file(url,file_name):
 if __name__ == "__main__":
     
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    links_file_path = os.path.join(current_dir, 'relinks.txt')
+    links_file_path = os.path.join(current_dir, 'regulations_links.txt')
     
     with open(links_file_path, 'r') as f:
         links = f.read().splitlines()
