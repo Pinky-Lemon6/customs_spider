@@ -197,11 +197,10 @@ def get_appendix(html_content, data):
             p_tags = news_div.find_all('p')
             # links = []
             for p in p_tags:
-                a_tag = p.find('a',href = True)
+                a_tags = p.find_all('a', href=True)
                 # print(a_tag)
-                if a_tag:
-                    link = a_tag['href']
-                        
+                for a_tag in a_tags:
+                    link = a_tag['href']   
                     if not link.startswith('http'):
                         link = 'http://gdfs.customs.gov.cn' + link
                         # print(link)
@@ -211,10 +210,16 @@ def get_appendix(html_content, data):
                     
                     file_name = a_tag.get_text(strip=True)
                     # 确保文件名合法
-                    file_name = file_name.replace('/', '_').replace('\\', '_')  # 替换非法字符
+                    file_name = file_name.replace('/', '_').replace('\\', '_') 
+                    
                     # 检查 file_name 是否包含有效的后缀
-                    valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff', '.rar']  
+                    valid_extensions = ['.doc', '.docx', '.xls', '.xlsx', '.pdf', '.tiff','.tif', '.rar','.zip']
+                    invalid_urls = ['www.customs.gov.cn','http:__online.customs.gov.cn','http:__ocr.customs.gov.cn','http:__','http:__www.customs.gov.cn','http:__ceb2.chinaport.gov.cn','www.chinaport.gov.cn','“@”+16','“@”+8','“@”+13','http:__pre.chinaport.gov.cn_car','http:__202.127.48.148_','http:__credit.customs.gov.cn','www.chinacustomsstat.com'
+                    ]  
                     if not any(file_name.endswith(ext) for ext in valid_extensions):
+                            # 抓取到的是网址
+                            if file_name in invalid_urls:
+                                continue
                             # 暂存 data 到 temp.json
                             with open('temp.json', 'w', encoding='utf-8') as json_file:
                                 json.dump(data, json_file, ensure_ascii=False, indent=4)
@@ -223,12 +228,8 @@ def get_appendix(html_content, data):
                             # 取消下载该文件
                             if new_file_name == 'cancel':
                                 continue
-                            # 检查新输入的文件名
-                            # if new_file_name.endswith('.tiff') or new_file_name.endswith('.rar'):
-                            #     print(f"文件 '{new_file_name}' 不进行下载。")
-                            #     continue  # 跳过下载
+                            
                             file_name = new_file_name
-                     
                     appendix.append(file_name)
                     
                     Flag = download_file(link,file_name)
@@ -306,7 +307,7 @@ def get_content(links,driver):
                     # driver.close()
                 else:
                     break   
-        with open('regulations_3.json', 'w', encoding='utf-8') as f:
+        with open('regulations_5.json', 'w', encoding='utf-8') as f:
             json.dump(data, f,ensure_ascii=False, indent=4)
     except Exception as e:
         print(f"发生错误: {e}")
