@@ -306,7 +306,7 @@ def get_content(links,driver):
                     # driver.close()
                 else:
                     break   
-        with open('regulations.json', 'w', encoding='utf-8') as f:
+        with open('regulations_3.json', 'w', encoding='utf-8') as f:
             json.dump(data, f,ensure_ascii=False, indent=4)
     except Exception as e:
         print(f"发生错误: {e}")
@@ -379,14 +379,23 @@ def download_file(url,file_name):
         else:
             print(f"文件下载失败: {file_name}")
             return False
+    except requests.exceptions.HTTPError as http_err:
+        # 检查是否是 404 错误
+        if response.status_code == 404:
+            print(f"404 错误: 文件未找到，忽略该错误: {url}")
+            return True  # 或者根据需要返回其他值
+        else:
+            print(f"下载文件时发生 HTTP 错误: {http_err}")
+            return False
     except Exception as e:
         print(f"下载文件时发生错误: {e}")
+        return False
         
 
 if __name__ == "__main__":
     
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    links_file_path = os.path.join(current_dir, 'regulations_links.txt')
+    links_file_path = os.path.join(current_dir, 'relinks.txt')
     
     with open(links_file_path, 'r') as f:
         links = f.read().splitlines()
