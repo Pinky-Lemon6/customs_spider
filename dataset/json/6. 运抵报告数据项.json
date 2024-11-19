@@ -1,0 +1,92 @@
+[
+    {
+        "序号": null,
+        "中国海关数据元名称": null,
+        "WCO DATA MODEL或UNTDED编号": null,
+        "填制要求": null
+    },
+    {
+        "序号": 1.0,
+        "中国海关数据元名称": "传输人代码",
+        "WCO DATA MODEL或UNTDED编号": "R006 Representative person name",
+        "填制要求": "必填"
+    },
+    {
+        "序号": 2.0,
+        "中国海关数据元名称": "出境关区代码",
+        "WCO DATA MODEL或UNTDED编号": "065 Office of declaration,coded",
+        "填制要求": "必填"
+    },
+    {
+        "序号": 3.0,
+        "中国海关数据元名称": "运输方式代码",
+        "WCO DATA MODEL或UNTDED编号": "183 Mode/type of means of transport crossing the border, coded",
+        "填制要求": "必填"
+    },
+    {
+        "序号": 4.0,
+        "中国海关数据元名称": "运单号",
+        "WCO DATA MODEL或UNTDED编号": "015 Transport document number",
+        "填制要求": "必填"
+    },
+    {
+        "序号": 5.0,
+        "中国海关数据元名称": "卸货地代码",
+        "WCO DATA MODEL或UNTDED编号": "080 Place of discharge, coded",
+        "填制要求": "必填"
+    },
+    {
+        "序号": 6.0,
+        "中国海关数据元名称": "到达卸货地日期",
+        "WCO DATA MODEL或UNTDED编号": "173 Date of arrival at place of discharge",
+        "填制要求": "必填"
+    },
+    {
+        "序号": 7.0,
+        "中国海关数据元名称": "货物体积",
+        "WCO DATA MODEL或UNTDED编号": "134 Cube",
+        "填制要求": "选填"
+    },
+    {
+        "序号": 8.0,
+        "中国海关数据元名称": "托运货物件数",
+        "WCO DATA MODEL或UNTDED编号": "146 Total number of packages",
+        "填制要求": "条件"
+    },
+    {
+        "序号": 9.0,
+        "中国海关数据元名称": "货物总毛重",
+        "WCO DATA MODEL或UNTDED编号": "131 Total gross weight",
+        "填制要求": "条件"
+    },
+    {
+        "序号": 10.0,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "填制要求": "选填"
+    },
+    {
+        "序号": 11.0,
+        "中国海关数据元名称": "集装箱（器）编号",
+        "WCO DATA MODEL或UNTDED编号": "159 Equipment identification number",
+        "填制要求": "条件"
+    },
+    {
+        "序号": 12.0,
+        "中国海关数据元名称": "变更原因描述",
+        "WCO DATA MODEL或UNTDED编号": "Change reason description",
+        "填制要求": "条件"
+    },
+    {
+        "序号": 13.0,
+        "中国海关数据元名称": "变更申请联系人姓名",
+        "WCO DATA MODEL或UNTDED编号": "Change reason contact name",
+        "填制要求": "条件"
+    },
+    {
+        "序号": 14.0,
+        "中国海关数据元名称": "变更申请联系人电话",
+        "WCO DATA MODEL或UNTDED编号": "Change reason contact number",
+        "填制要求": "条件"
+    }
+]

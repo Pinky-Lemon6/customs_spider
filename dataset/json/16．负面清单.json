@@ -1,0 +1,150 @@
+[
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Agricultural products（农产品）",
+        "Acceptable（可接受申报）": " Long grain（籼米）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Aid consignments（援助的货物）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Animals（动物）",
+        "Acceptable（可接受申报）": "Live horses（活马）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Apparel（服装）",
+        "Acceptable（可接受申报）": "Dresses（连衣裙）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Appliances（电器）",
+        "Acceptable（可接受申报）": "TV set（电视机）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Ceramic products（陶瓷产品）",
+        "Acceptable（可接受申报）": "Refractory bricks（耐火砖）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Chemicals, hazardous（化学品，危险）",
+        "Acceptable（可接受申报）": "Red phosphorus（红磷）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Electronics（数码产品）",
+        "Acceptable（可接受申报）": "Video games（电子游戏机）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Equipment（设备）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Flooring（地板）",
+        "Acceptable（可接受申报）": "Wood Flooring（木地板）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Foodstuffs（食品）",
+        "Acceptable（可接受申报）": "Sweet biscuits（甜饼干）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Freight of All Kinds（各类杂货）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Gifts（礼品）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Iron（铁）",
+        "Acceptable（可接受申报）": "Iron Pipes（铁管）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Leather Articles（皮革制品）",
+        "Acceptable（可接受申报）": "Leather Handbags（皮革手提包）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Machines（机器）",
+        "Acceptable（可接受申报）": "Cuting-off machines（切割机）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Meat（肉）",
+        "Acceptable（可接受申报）": "Meat of swine（猪肉）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Mineral Products（矿产品）",
+        "Acceptable（可接受申报）": "Edible salt（食用盐）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Oil（油）",
+        "Acceptable（可接受申报）": "Lubricating oils（润滑油）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Personal Effects（私人物品）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Pipes（管）",
+        "Acceptable（可接受申报）": "Plastic Pipes（塑料管）     "
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Plants（植物）",
+        "Acceptable（可接受申报）": "Orchid（兰花）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Plastic Goods（塑料制品）",
+        "Acceptable（可接受申报）": "Lavatory covers（马桶盖）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Rubber Articles（橡胶制品）",
+        "Acceptable（可接受申报）": "Tires（轮胎）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Sporting goods （体育用品）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Steel（钢）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Textiles（纺织品）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Tools（工具）",
+        "Acceptable（可接受申报）": "Screwdrivers（螺丝刀）"
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Wood（木头）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Wooden articles（木制品）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Animal products（动物产品）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Rubber articles（橡胶制品）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "Glass articles（玻璃制品）",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "纯单一字母，如：AAAAA，Bb等",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "纯单一数字，如：12345等",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "纯单一汉字，如：树、皮等",
+        "Acceptable（可接受申报）": null
+    },
+    {
+        "Non Acceptable（不接受申报）负面清单一类": "…",
+        "Acceptable（可接受申报）": null
+    }
+]

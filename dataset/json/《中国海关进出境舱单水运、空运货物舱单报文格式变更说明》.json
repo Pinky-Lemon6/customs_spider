@@ -1,0 +1,41 @@
+[
+    {
+        "文件类型": "国际转运准单",
+        "文件名称": "Manifest_Transfer_Check_Ship_8105_2.xsd",
+        "文件全称": "Manifest_Transfer_Check_Ship_8105_2.xsd",
+        "文件含义": "水运国际转运准单",
+        "编码": "MT8105",
+        "编码含义": "水运国际转运申请",
+        "变更数据项（节点）": "Manifest:Declaration:KeyImportConsignment\n",
+        "变更数据项含义": "分运单节点约束",
+        "变更具体描述": "增加分运单节点约束",
+        "变更前内容": "<xs:unique name=\"KeyImportConsignment\">\n  <xs:selector xpath=\"decl:Relation/decl:ImportInformation/decl:Consignment/decl:TransportContractDocument\"/>\n  <xs:field xpath=\"decl:ID\"/>\n</xs:unique>\n",
+        "变更后内容": "<xs:unique name=\"KeyImportConsignment\">\n   <xs:selector xpath=\"decl:Relation/decl:ImportInformation/decl:Consignment\"/>\n   <xs:field xpath=\"decl:TransportContractDocument/decl:ID\"/>\n   <xs:field xpath=\"decl:AssociatedTransportDocument/decl:ID\"/>\n</xs:unique>\n<xs:unique name=\"KeyImportAssociatedTransportDocument\">\n   <xs:selector xpath=\"decl:Relation/decl:ImportInformation/decl:Consignment/decl:AssociatedTransportDocument\"/>\n   <xs:field xpath=\"decl:ID\"/>\n</xs:unique>"
+    },
+    {
+        "文件类型": "国际转运准单",
+        "文件名称": "Manifest_Transfer_Check_Ship_8105_2.xsd",
+        "文件全称": "Manifest_Transfer_Check_Ship_8105_2.xsd",
+        "文件含义": "水运国际转运准单",
+        "编码": "MT8105",
+        "编码含义": "水运国际转运申请",
+        "变更数据项（节点）": "Manifest:Declaration:Relation:ImportInformation:Consignment:AssociatedTransportDocument",
+        "变更数据项含义": "增加进口提运单分单节点",
+        "变更具体描述": "修改进口提运单分单节点为选填项",
+        "变更前内容": "<xs:element name=\"AssociatedTransportDocument\" type=\"decl:AssociatedTransportDocument\" minOccurs=\"0\" maxOccurs=\"0\">",
+        "变更后内容": "<xs:element name=\"AssociatedTransportDocument\" type=\"decl:AssociatedTransportDocument\" minOccurs=\"0\">"
+    },
+    {
+        "文件类型": "国际转运准单",
+        "文件名称": "Manifest_Transfer_Check_Ship_8105_2.xsd",
+        "文件全称": "Manifest_Transfer_Check_Ship_8105_2.xsd",
+        "文件含义": "水运国际转运准单",
+        "编码": "MT8105",
+        "编码含义": "水运国际转运申请",
+        "变更数据项（节点）": "Manifest:Declaration:Relation:ExportInformation:Consignment:AssociatedTransportDocument",
+        "变更数据项含义": "增加出口提运单分单节点",
+        "变更具体描述": "修改出口提运单分单节点为选填项",
+        "变更前内容": "<xs:element name=\"AssociatedTransportDocument\" type=\"decl:AssociatedTransportDocument\" minOccurs=\"0\" maxOccurs=\"0\">",
+        "变更后内容": "<xs:element name=\"AssociatedTransportDocument\" type=\"decl:AssociatedTransportDocument\" minOccurs=\"0\">"
+    }
+]

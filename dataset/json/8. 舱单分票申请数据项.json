@@ -1,0 +1,240 @@
+[
+    {
+        "序号": null,
+        "中国海关数据元名称": null,
+        "WCO DATA MODEL或UNTDED编号": null,
+        "进境": null,
+        "出境": null
+    },
+    {
+        "序号": 1.0,
+        "中国海关数据元名称": "分票申请人代码",
+        "WCO DATA MODEL或UNTDED编号": "R006 Representative person name",
+        "进境": "必填",
+        "出境": " 必填"
+    },
+    {
+        "序号": 2.0,
+        "中国海关数据元名称": "关区代码",
+        "WCO DATA MODEL或UNTDED编号": "065 Office of declaration,coded",
+        "进境": "必填",
+        "出境": "必填"
+    },
+    {
+        "序号": 3.0,
+        "中国海关数据元名称": "运输方式代码",
+        "WCO DATA MODEL或UNTDED编号": "183 Mode/type of means of transport crossing the border, coded",
+        "进境": "必填",
+        "出境": "必填"
+    },
+    {
+        "序号": 4.0,
+        "中国海关数据元名称": "运单号",
+        "WCO DATA MODEL或UNTDED编号": "015 Transport document number",
+        "进境": "必填",
+        "出境": "必填"
+    },
+    {
+        "序号": 5.0,
+        "中国海关数据元名称": "车号",
+        "WCO DATA MODEL或UNTDED编号": "160 Identification of means of transport crossing the border",
+        "进境": "必填",
+        "出境": "——"
+    },
+    {
+        "序号": 6.0,
+        "中国海关数据元名称": "货物总毛重（KG）",
+        "WCO DATA MODEL或UNTDED编号": "131 Total gross weight",
+        "进境": "必填",
+        "出境": "必填"
+    },
+    {
+        "序号": 7.0,
+        "中国海关数据元名称": "托运货物件数",
+        "WCO DATA MODEL或UNTDED编号": "146 Total number of packages",
+        "进境": "必填",
+        "出境": "必填"
+    },
+    {
+        "序号": 8.0,
+        "中国海关数据元名称": "包装种类",
+        "WCO DATA MODEL或UNTDED编号": "141 Type of packages identification",
+        "进境": "必填",
+        "出境": "必填"
+    },
+    {
+        "序号": 9.0,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 10.0,
+        "中国海关数据元名称": "货物件数",
+        "WCO DATA MODEL或UNTDED编号": "146 Total number of packages",
+        "进境": "必填",
+        "出境": "必填"
+    },
+    {
+        "序号": 11.0,
+        "中国海关数据元名称": "货物毛重（KG）",
+        "WCO DATA MODEL或UNTDED编号": "131 Total gross weight",
+        "进境": "必填",
+        "出境": "必填"
+    },
+    {
+        "序号": 12.0,
+        "中国海关数据元名称": "收货人名称",
+        "WCO DATA MODEL或UNTDED编号": "051 Consignee name",
+        "进境": "必填",
+        "出境": "选填"
+    },
+    {
+        "序号": 13.0,
+        "中国海关数据元名称": "收货人地址",
+        "WCO DATA MODEL或UNTDED编号": "239 Street and number/P.O.Box",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 14.0,
+        "中国海关数据元名称": "收货人联系号码",
+        "WCO DATA MODEL或UNTDED编号": "20 Communication number",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 15.0,
+        "中国海关数据元名称": "通讯方式类别代码",
+        "WCO DATA MODEL或UNTDED编号": "253 Communication number Type",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 16.0,
+        "中国海关数据元名称": "发货人名称",
+        "WCO DATA MODEL或UNTDED编号": "071 consignor-name",
+        "进境": "选填",
+        "出境": "必填"
+    },
+    {
+        "序号": 17.0,
+        "中国海关数据元名称": "发货人地址",
+        "WCO DATA MODEL或UNTDED编号": "239 Street and number/P.O.Box",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 18.0,
+        "中国海关数据元名称": "发货人联系号码",
+        "WCO DATA MODEL或UNTDED编号": "20 Communication number",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 19.0,
+        "中国海关数据元名称": "通讯方式类别代码",
+        "WCO DATA MODEL或UNTDED编号": "253 Communication number Type",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 20.0,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 21.0,
+        "中国海关数据元名称": "集装箱（器）编号",
+        "WCO DATA MODEL或UNTDED编号": "159 Equipment identification number",
+        "进境": "条件",
+        "出境": "条件"
+    },
+    {
+        "序号": 22.0,
+        "中国海关数据元名称": "商品项序号",
+        "WCO DATA MODEL或UNTDED编号": "006 Sequence number",
+        "进境": "条件",
+        "出境": "条件"
+    },
+    {
+        "序号": 23.0,
+        "中国海关数据元名称": "包装种类",
+        "WCO DATA MODEL或UNTDED编号": "141 Type of packages identification",
+        "进境": "条件",
+        "出境": "条件"
+    },
+    {
+        "序号": 24.0,
+        "中国海关数据元名称": "货物件数",
+        "WCO DATA MODEL或UNTDED编号": "146 Total number of packages",
+        "进境": "条件",
+        "出境": "条件"
+    },
+    {
+        "序号": 25.0,
+        "中国海关数据元名称": "货物简要描述",
+        "WCO DATA MODEL或UNTDED编号": "138 Brief cargo description",
+        "进境": "条件",
+        "出境": "条件"
+    },
+    {
+        "序号": 26.0,
+        "中国海关数据元名称": "货物描述补充信息",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 27.0,
+        "中国海关数据元名称": "货物毛重",
+        "WCO DATA MODEL或UNTDED编号": "131 Total gross weight",
+        "进境": "条件",
+        "出境": "条件"
+    },
+    {
+        "序号": 28.0,
+        "中国海关数据元名称": "海关6位税则编号",
+        "WCO DATA MODEL或UNTDED编号": "145 Tariff code number (Customs)",
+        "进境": "条件",
+        "出境": "选填"
+    },
+    {
+        "序号": 29.0,
+        "中国海关数据元名称": "唛头",
+        "WCO DATA MODEL或UNTDED编号": "142 Shipping marks",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 30.0,
+        "中国海关数据元名称": "海关手续代码",
+        "WCO DATA MODEL或UNTDED编号": "166 Customs procedure, coded",
+        "进境": "选填",
+        "出境": "选填"
+    },
+    {
+        "序号": 31.0,
+        "中国海关数据元名称": "变更原因描述",
+        "WCO DATA MODEL或UNTDED编号": "Change reason description",
+        "进境": "条件",
+        "出境": "条件"
+    },
+    {
+        "序号": 32.0,
+        "中国海关数据元名称": "变更申请联系人姓名",
+        "WCO DATA MODEL或UNTDED编号": "Change reason contact name",
+        "进境": "条件",
+        "出境": "条件"
+    },
+    {
+        "序号": 33.0,
+        "中国海关数据元名称": "变更申请联系人电话",
+        "WCO DATA MODEL或UNTDED编号": "Change reason contact number",
+        "进境": "条件",
+        "出境": "条件"
+    }
+]

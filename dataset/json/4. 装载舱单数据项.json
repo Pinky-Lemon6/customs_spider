@@ -1,0 +1,68 @@
+[
+    {
+        "序号": null,
+        "中国海关数据元名称": null,
+        "WCO DATA MODEL或UNTDED编号": null,
+        "填制条件": null
+    },
+    {
+        "序号": 1.0,
+        "中国海关数据元名称": "舱单传输人代码",
+        "WCO DATA MODEL或UNTDED编号": "R006 Representative person name",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 2.0,
+        "中国海关数据元名称": "出境口岸代码",
+        "WCO DATA MODEL或UNTDED编号": "085 First port of arrival, coded",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 3.0,
+        "中国海关数据元名称": "出境关区代码",
+        "WCO DATA MODEL或UNTDED编号": "065 Office of declaration,coded",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 4.0,
+        "中国海关数据元名称": "运输方式代码",
+        "WCO DATA MODEL或UNTDED编号": "183 Mode/type of means of transport crossing the border, coded",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 5.0,
+        "中国海关数据元名称": "运输工具代理企业代码",
+        "WCO DATA MODEL或UNTDED编号": "061 Agent, coded",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 6.0,
+        "中国海关数据元名称": "承运人代码",
+        "WCO DATA MODEL或UNTDED编号": "050 Carrier identification.",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 7.0,
+        "中国海关数据元名称": "车号",
+        "WCO DATA MODEL或UNTDED编号": "160 Identification of means of transport crossing the border",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 8.0,
+        "中国海关数据元名称": "运单号",
+        "WCO DATA MODEL或UNTDED编号": "015 Transport document number",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 9.0,
+        "中国海关数据元名称": "集装箱（器）编号",
+        "WCO DATA MODEL或UNTDED编号": "159 Equipment identification number",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 10.0,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "填制条件": "选填"
+    }
+]

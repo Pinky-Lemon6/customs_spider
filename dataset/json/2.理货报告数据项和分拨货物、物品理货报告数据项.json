@@ -1,0 +1,240 @@
+[
+    {
+        "序号": null,
+        "中国海关数据元名称": null,
+        "WCO DATA MODEL或UNTDED编号": null,
+        "水运": null,
+        "空运": null
+    },
+    {
+        "序号": 1.0,
+        "中国海关数据元名称": "航次航班编号",
+        "WCO DATA MODEL或UNTDED编号": "149 Conveyance reference number",
+        "水运": "必填",
+        "空运": "必填"
+    },
+    {
+        "序号": 2.0,
+        "中国海关数据元名称": "运输方式代码",
+        "WCO DATA MODEL或UNTDED编号": "183 Mode/type of means of transport crossing the border, coded ",
+        "水运": "必填",
+        "空运": "必填"
+    },
+    {
+        "序号": 3.0,
+        "中国海关数据元名称": "运输工具代码",
+        "WCO DATA MODEL或UNTDED编号": "167 Identification of means of transport crossing the border, coded ",
+        "水运": "必填",
+        "空运": "选填"
+    },
+    {
+        "序号": 4.0,
+        "中国海关数据元名称": "运输工具名称",
+        "WCO DATA MODEL或UNTDED编号": "160 Identification of means of transport crossing the border",
+        "水运": "必填",
+        "空运": "选填"
+    },
+    {
+        "序号": 5.0,
+        "中国海关数据元名称": "装卸开始时间",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 2380 Date/time/period",
+        "水运": "必填",
+        "空运": "选填"
+    },
+    {
+        "序号": 6.0,
+        "中国海关数据元名称": "装卸结束时间",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 2380 Date/time/period",
+        "水运": "必填",
+        "空运": "必填"
+    },
+    {
+        "序号": 7.0,
+        "中国海关数据元名称": "申报地海关代码",
+        "WCO DATA MODEL或UNTDED编号": "065 Customs office of declaration, coded",
+        "水运": "必填",
+        "空运": "必填"
+    },
+    {
+        "序号": 8.0,
+        "中国海关数据元名称": "理货部门代码",
+        "WCO DATA MODEL或UNTDED编号": "238 Party ID identification",
+        "水运": "必填",
+        "空运": "必填"
+    },
+    {
+        "序号": 9.0,
+        "中国海关数据元名称": "理货责任人名称",
+        "WCO DATA MODEL或UNTDED编号": "246 Department or employee contact name",
+        "水运": "选填",
+        "空运": "选填"
+    },
+    {
+        "序号": 10.0,
+        "中国海关数据元名称": "理货责任人联系号码",
+        "WCO DATA MODEL或UNTDED编号": "240 Communication number ",
+        "水运": "选填",
+        "空运": "选填"
+    },
+    {
+        "序号": 11.0,
+        "中国海关数据元名称": "通讯方式类别代码",
+        "WCO DATA MODEL或UNTDED编号": "253 Communication number Type ",
+        "水运": "选填",
+        "空运": "选填"
+    },
+    {
+        "序号": 12.0,
+        "中国海关数据元名称": "船长/大副名称",
+        "WCO DATA MODEL或UNTDED编号": "246 Department or employee contact name",
+        "水运": "选填",
+        "空运": "选填"
+    },
+    {
+        "序号": 13.0,
+        "中国海关数据元名称": "船长/大副联系号码",
+        "WCO DATA MODEL或UNTDED编号": "240 Communication number ",
+        "水运": "选填",
+        "空运": "选填"
+    },
+    {
+        "序号": 14.0,
+        "中国海关数据元名称": "通讯方式类别代码",
+        "WCO DATA MODEL或UNTDED编号": "253 Communication number Type ",
+        "水运": "选填",
+        "空运": "选填"
+    },
+    {
+        "序号": 15.0,
+        "中国海关数据元名称": "总提运单号",
+        "WCO DATA MODEL或UNTDED编号": "015 Transport document number",
+        "水运": "必填",
+        "空运": "必填"
+    },
+    {
+        "序号": 16.0,
+        "中国海关数据元名称": "分提运单号",
+        "WCO DATA MODEL或UNTDED编号": "189 Associated transport document number",
+        "水运": "条件",
+        "空运": "条件"
+    },
+    {
+        "序号": 17.0,
+        "中国海关数据元名称": "装货地代码",
+        "WCO DATA MODEL或UNTDED编号": "070 Place of loading, coded",
+        "水运": "条件",
+        "空运": "条件"
+    },
+    {
+        "序号": 18.0,
+        "中国海关数据元名称": "卸货地代码",
+        "WCO DATA MODEL或UNTDED编号": "080 Place of discharge, coded",
+        "水运": "条件",
+        "空运": "条件"
+    },
+    {
+        "序号": 19.0,
+        "中国海关数据元名称": "集装箱（器）编号",
+        "WCO DATA MODEL或UNTDED编号": "159 Equipment identification number",
+        "水运": "条件",
+        "空运": "选填"
+    },
+    {
+        "序号": 20.0,
+        "中国海关数据元名称": "集装箱（器）尺寸和类型",
+        "WCO DATA MODEL或UNTDED编号": "152 Equipment size and type identification",
+        "水运": "条件",
+        "空运": "选填"
+    },
+    {
+        "序号": 21.0,
+        "中国海关数据元名称": "重箱或者空箱标识代码",
+        "WCO DATA MODEL或UNTDED编号": "154 Transport equipment loaded status ",
+        "水运": "条件",
+        "空运": "选填"
+    },
+    {
+        "序号": 22.0,
+        "中国海关数据元名称": "封志号码，类型和施加封志人",
+        "WCO DATA MODEL或UNTDED编号": "165 Seal number",
+        "水运": "条件",
+        "空运": "选填"
+    },
+    {
+        "序号": 23.0,
+        "中国海关数据元名称": "船舶贝位",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 8043  Stowage place onboard, coded",
+        "水运": "条件",
+        "空运": "选填"
+    },
+    {
+        "序号": 24.0,
+        "中国海关数据元名称": "残损类型代码",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 7501 Damage type description code",
+        "水运": "条件",
+        "空运": "选填"
+    },
+    {
+        "序号": 25.0,
+        "中国海关数据元名称": "残损类型",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 7500 Damage type description",
+        "水运": "选填",
+        "空运": "选填"
+    },
+    {
+        "序号": 26.0,
+        "中国海关数据元名称": "残损范围代码",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 7503 Damage area description code",
+        "水运": "条件",
+        "空运": "选填"
+    },
+    {
+        "序号": 27.0,
+        "中国海关数据元名称": "残损范围",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 7502 Damage area description",
+        "水运": "选填",
+        "空运": "选填"
+    },
+    {
+        "序号": 28.0,
+        "中国海关数据元名称": "残损程度",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 7508 Damage severity description",
+        "水运": "条件",
+        "空运": "选填"
+    },
+    {
+        "序号": 29.0,
+        "中国海关数据元名称": "包装种类代码",
+        "WCO DATA MODEL或UNTDED编号": "141 Type of packages identification",
+        "水运": "条件",
+        "空运": "选填"
+    },
+    {
+        "序号": 30.0,
+        "中国海关数据元名称": "托运货物件数",
+        "WCO DATA MODEL或UNTDED编号": "146 Total number of packages",
+        "水运": "条件",
+        "空运": "必填"
+    },
+    {
+        "序号": 31.0,
+        "中国海关数据元名称": "货物总毛重",
+        "WCO DATA MODEL或UNTDED编号": "131 Total gross weight",
+        "水运": "条件",
+        "空运": "必填"
+    },
+    {
+        "序号": 32.0,
+        "中国海关数据元名称": "货物体积",
+        "WCO DATA MODEL或UNTDED编号": "134 Cube",
+        "水运": "条件",
+        "空运": "选填"
+    },
+    {
+        "序号": 33.0,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "水运": "选填",
+        "空运": "选填"
+    }
+]

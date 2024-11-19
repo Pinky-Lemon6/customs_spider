@@ -1,0 +1,58 @@
+[
+    {
+        "序号": 1,
+        "中国海关数据元名称": "航空器注册编号",
+        "WCO DATA MODEL或UNTDED编号": "167 Identification of means of transport crossing the border, coded",
+        "格式": "an..25",
+        "结关申请\n填制条件": "必填",
+        "反结关申请\n填制条件": "必填"
+    },
+    {
+        "序号": 2,
+        "中国海关数据元名称": "航班号",
+        "WCO DATA MODEL或UNTDED编号": "149 Conveyance reference number",
+        "格式": "an..17",
+        "结关申请\n填制条件": "必填",
+        "反结关申请\n填制条件": "必填"
+    },
+    {
+        "序号": 3,
+        "中国海关数据元名称": "航班日期",
+        "WCO DATA MODEL或UNTDED编号": "173 Date of arrival at place of discharge\n169 Date of departure from place of loading",
+        "格式": "n8(CCYYMMDD)",
+        "结关申请\n填制条件": "必填",
+        "反结关申请\n填制条件": "必填"
+    },
+    {
+        "序号": 4,
+        "中国海关数据元名称": "进出境(港）标识",
+        "WCO DATA MODEL或UNTDED编号": "166 Customs procedure, coded",
+        "格式": "an..7",
+        "结关申请\n填制条件": "必填",
+        "反结关申请\n填制条件": "必填"
+    },
+    {
+        "序号": 5,
+        "中国海关数据元名称": "抵达港口",
+        "WCO DATA MODEL或UNTDED编号": "211 Conveyance facility location at arrival",
+        "格式": "an..11",
+        "结关申请\n填制条件": "条件",
+        "反结关申请\n填制条件": "条件"
+    },
+    {
+        "序号": 6,
+        "中国海关数据元名称": "驶离港口",
+        "WCO DATA MODEL或UNTDED编号": "212 Conveyance facility location at departure",
+        "格式": "an..11",
+        "结关申请\n填制条件": "条件",
+        "反结关申请\n填制条件": "条件"
+    },
+    {
+        "序号": 7,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "格式": "an..512",
+        "结关申请\n填制条件": "选填",
+        "反结关申请\n填制条件": "必填"
+    }
+]

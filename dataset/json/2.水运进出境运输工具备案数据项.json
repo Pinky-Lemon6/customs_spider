@@ -1,0 +1,93 @@
+[
+    {
+        "序号": 1,
+        "中国海关数据元名称": "船名",
+        "WCO DATA MODEL或UNTDED编号": "160 Identification of means of transport crossing the border",
+        "格式": "an..256",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 2,
+        "中国海关数据元名称": "中文船名",
+        "WCO DATA MODEL或UNTDED编号": "160 Identification of means of transport crossing the border",
+        "格式": "an..256",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 3,
+        "中国海关数据元名称": "船舶编号",
+        "WCO DATA MODEL或UNTDED编号": "167 Identification of means of transport crossing the border, coded",
+        "格式": "an..25",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 4,
+        "中国海关数据元名称": "船旗国",
+        "WCO DATA MODEL或UNTDED编号": "175 Nationality of means of transport crossing the border, coded",
+        "格式": "a2",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 5,
+        "中国海关数据元名称": "船舶建造日期",
+        "WCO DATA MODEL或UNTDED编号": "Date of Construction ",
+        "格式": "*n8(CCYYMMDD)",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 6,
+        "中国海关数据元名称": "船籍港代码",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 3105 Transport Means. Registration Location. Identifier",
+        "格式": "an..35",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 7,
+        "中国海关数据元名称": "船舶种类代码",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 8179 Type of means of transport identification",
+        "格式": "an..18",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 8,
+        "中国海关数据元名称": "运营性质",
+        "WCO DATA MODEL或UNTDED编号": "Liner or Tramp",
+        "格式": "*an..35",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 9,
+        "中国海关数据元名称": "净吨位",
+        "WCO DATA MODEL或UNTDED编号": "133 Net tonnage",
+        "格式": "n..14,3",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 10,
+        "中国海关数据元名称": "船舶监管类型",
+        "WCO DATA MODEL或UNTDED编号": "type of supervision ",
+        "格式": "*an..35",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 11,
+        "中国海关数据元名称": "船舶运营企业编码",
+        "WCO DATA MODEL或UNTDED编号": "050 Carrier identification",
+        "格式": "an..18",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 12,
+        "中国海关数据元名称": "水上移动通信业务标识码(MMSI)",
+        "WCO DATA MODEL或UNTDED编号": "Maritime Mobile Service Identify",
+        "格式": "*an..25",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 13,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "格式": "an..512",
+        "填制条件": "选填"
+    }
+]

@@ -1,0 +1,233 @@
+[
+    {
+        "序号": 1,
+        "中国海关数据元名称": "装箱清单传输人名称",
+        "WCO DATA MODEL或UNTDED名称": "R006 Representative person name",
+        "格式": "an..70",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 2,
+        "中国海关数据元名称": "进出境口岸海关代码",
+        "WCO DATA MODEL或UNTDED名称": "065 Office of declaration,coded",
+        "格式": "an..17",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 3,
+        "中国海关数据元名称": "运输方式代码",
+        "WCO DATA MODEL或UNTDED名称": "T010 Mode/type of means of transport crossing the border,coded",
+        "格式": "an..4",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 4,
+        "中国海关数据元名称": "装箱清单编号",
+        "WCO DATA MODEL或UNTDED名称": "D014 Declaration reference number",
+        "格式": "an..35",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 5,
+        "中国海关数据元名称": "装货地代码",
+        "WCO DATA MODEL或UNTDED名称": "L010 Place of loading,coded",
+        "格式": "an..17",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 6,
+        "中国海关数据元名称": "货物装箱时间",
+        "WCO DATA MODEL或UNTDED名称": "025 Date of vanning",
+        "格式": "an..17",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 7,
+        "中国海关数据元名称": "集装箱（器）编号",
+        "WCO DATA MODEL或UNTDED名称": "159 Equipment identification number",
+        "格式": "an..17",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 8,
+        "中国海关数据元名称": "集装箱（器）尺寸和类型",
+        "WCO DATA MODEL或UNTDED名称": "152 Equipment size and type identification",
+        "格式": "an..4",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 9,
+        "中国海关数据元名称": "集装箱（器）来源代码",
+        "WCO DATA MODEL或UNTDED名称": "151 Equipment supplier type code",
+        "格式": "n1",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 10,
+        "中国海关数据元名称": "集装箱（器）重箱或者空箱标识代码",
+        "WCO DATA MODEL或UNTDED名称": "154 Transport equipment loaded status",
+        "格式": "n1",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 11,
+        "中国海关数据元名称": "集装箱（器）封志号码、类型及施加封志人类型",
+        "WCO DATA MODEL或UNTDED名称": "165 Seal number",
+        "格式": "an..35",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 12,
+        "中国海关数据元名称": "托运货物序号",
+        "WCO DATA MODEL或UNTDED名称": "006 Sequence number",
+        "格式": "n..5",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 13,
+        "中国海关数据元名称": "货物件数",
+        "WCO DATA MODEL或UNTDED名称": "144 Number of packages",
+        "格式": "n..8",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 14,
+        "中国海关数据元名称": "货物简要描述",
+        "WCO DATA MODEL或UNTDED名称": "138 Brief cargo description",
+        "格式": "an..256",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 15,
+        "中国海关数据元名称": "货物描述补充信息",
+        "WCO DATA MODEL或UNTDED名称": "137 Description of goods",
+        "格式": "an..512",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 16,
+        "中国海关数据元名称": "货物毛重",
+        "WCO DATA MODEL或UNTDED名称": "126 Gross weight item level",
+        "格式": "n..11,3",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 17,
+        "中国海关数据元名称": "危险品编号",
+        "WCO DATA MODEL或UNTDED名称": "145 Commodity classification",
+        "格式": "an..18",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 18,
+        "中国海关数据元名称": "收货人代码",
+        "WCO DATA MODEL或UNTDED名称": "R015 Consignee coded",
+        "格式": "an..17",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 19,
+        "中国海关数据元名称": "收货人名称",
+        "WCO DATA MODEL或UNTDED名称": "R014 Consignee name",
+        "格式": "an..70",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 20,
+        "中国海关数据元名称": "收货人联系号码",
+        "WCO DATA MODEL或UNTDED名称": "240 Communication number",
+        "格式": "an..50",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 21,
+        "中国海关数据元名称": "收货人通讯方式类别代码",
+        "WCO DATA MODEL或UNTDED名称": "253 Communication number Type",
+        "格式": "an..3",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 22,
+        "中国海关数据元名称": "收货具体联系人名称",
+        "WCO DATA MODEL或UNTDED名称": "246 Department or employee contact name",
+        "格式": "an..70",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 23,
+        "中国海关数据元名称": "收货具体联系人联系号码",
+        "WCO DATA MODEL或UNTDED名称": "240 Communication number",
+        "格式": "an..50",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 24,
+        "中国海关数据元名称": "收货具体联系人通讯方式类别代码",
+        "WCO DATA MODEL或UNTDED名称": "253 Communication number Type",
+        "格式": "an..3",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 25,
+        "中国海关数据元名称": "通知人代码",
+        "WCO DATA MODEL或UNTDED名称": "R046 Notify party,coded",
+        "格式": "an..17",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 26,
+        "中国海关数据元名称": "通知人名称 ",
+        "WCO DATA MODEL或UNTDED名称": "R045 Notify party",
+        "格式": "an..70",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 27,
+        "中国海关数据元名称": "通知人地址（街道,邮箱）",
+        "WCO DATA MODEL或UNTDED名称": "239 Street and number/P.O.Box",
+        "格式": "an..70",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 28,
+        "中国海关数据元名称": "通知人联系号码",
+        "WCO DATA MODEL或UNTDED名称": "240 Communication number",
+        "格式": "an..50",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 29,
+        "中国海关数据元名称": "通知人通讯方式类别代码",
+        "WCO DATA MODEL或UNTDED名称": "253 Communication number Type",
+        "格式": "an..3",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 30,
+        "中国海关数据元名称": "危险品联系人姓名",
+        "WCO DATA MODEL或UNTDED名称": "R047 Dangerous goods contact details",
+        "格式": "an..70",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 31,
+        "中国海关数据元名称": "危险品联系人联系号码",
+        "WCO DATA MODEL或UNTDED名称": "240 Communication number",
+        "格式": "an..50",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 32,
+        "中国海关数据元名称": "危险品联系人通讯方式类别代码",
+        "WCO DATA MODEL或UNTDED名称": "253 Communication number Type",
+        "格式": "an..3",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 33,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED名称": "105 Free text",
+        "格式": "an..512",
+        "填制条件": "选填"
+    }
+]

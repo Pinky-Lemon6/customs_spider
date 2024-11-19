@@ -1,0 +1,58 @@
+[
+    {
+        "序号":1,
+        "中国海关数据元名称":"预录入编号",
+        "WCO DATA MODEL或UNTDED编号":"009 Trader reference",
+        "格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"供退标志",
+        "WCO DATA MODEL或UNTDED编号":"SupplyFlag",
+        "格式":"*an..7",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"服务企业代码",
+        "WCO DATA MODEL或UNTDED编号":"R006 Representative person name",
+        "格式":"an..70",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"关区代码",
+        "WCO DATA MODEL或UNTDED编号":"065 Office of declaration,coded",
+        "格式":"an..4",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"车次号",
+        "WCO DATA MODEL或UNTDED编号":"149 Conveyance reference number",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"航次号",
+        "WCO DATA MODEL或UNTDED编号":"149 Conveyance reference number",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"列车进出境标志",
+        "WCO DATA MODEL或UNTDED编号":"IEFLAG",
+        "格式":"*an..7",
+        "填制条件":"必填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "格式":"an..512",
+        "填制条件":"选填"
+    }
+]

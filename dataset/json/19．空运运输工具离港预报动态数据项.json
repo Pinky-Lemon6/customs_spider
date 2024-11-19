@@ -1,0 +1,58 @@
+[
+    {
+        "序号": 1,
+        "中国海关数据元名称": "航空器注册编号",
+        "WCO DATA MODEL或UNTDED编号": "167 Identification of means of transport crossing the border, coded",
+        "格式": "an..25",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 2,
+        "中国海关数据元名称": "出港航班号",
+        "WCO DATA MODEL或UNTDED编号": "149 Conveyance reference number",
+        "格式": "an..17",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 3,
+        "中国海关数据元名称": "航班日期",
+        "WCO DATA MODEL或UNTDED编号": "169 Date of departure from place of loading",
+        "格式": "n8(CCYYMMDD)",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 4,
+        "中国海关数据元名称": "出发港",
+        "WCO DATA MODEL或UNTDED编号": "212 Conveyance facility location at departure",
+        "格式": "an..11",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 5,
+        "中国海关数据元名称": "目的港",
+        "WCO DATA MODEL或UNTDED编号": "211 Conveyance facility location at arrival",
+        "格式": "an..11",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 6,
+        "中国海关数据元名称": "预计离港时间",
+        "WCO DATA MODEL或UNTDED编号": "209 Itinerary departure date and time",
+        "格式": "an15(CCYYMMDDHHMMZZZ)",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 7,
+        "中国海关数据元名称": "停靠机位",
+        "WCO DATA MODEL或UNTDED编号": "010 Ships stay reference",
+        "格式": "an..35",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 8,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "格式": "an..512",
+        "填制条件": "选填"
+    }
+]

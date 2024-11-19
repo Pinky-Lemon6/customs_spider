@@ -1,0 +1,29 @@
+PDF_with_table:
+"announcement_number": "公告〔2021〕119 号" √
+"announcement_number": "公告〔2022〕135号"  √
+"announcement_number": "公告〔2023〕196号"  √
+"announcement_number": "公告〔2024〕137号"   √
+"announcement_number": "公告〔2021〕49号"   √
+"announcement_number": "公告〔2023〕197号"  √
+"announcement_number": "公告〔2021〕16号"   √    
+"announcement_number": "总署公告〔2015〕8 号"   √
+"announcement_number": "总署公告〔2011〕47号"   √
+"announcement_number": "公告2005年第45号"   √
+"announcement_number": "公告〔2022〕26 号"  √
+
+
+PDF_with_picture:
+"announcement_number": "公告〔2023〕91号"  √
+"announcement_number": "公告〔2020〕27号"   √
+"announcement_number": "公告〔2019〕122 号" √
+
+
+
+请你继续提取，下面是第八个表格的数据，分类变成“非全税目适用增值税政策的部分进口饲料清单”，这个表格只有1条数据
+
+请你继续提取，下面是第九个表格的数据，分类变成“非全税目适用增值税政策的进口黄金和黄金砂矿、黄金伴生矿、粗铜清单”，这个表格有7条数据
+
+请你继续提取，下面是第十个表格的数据，分类变成“非全税目适用消费税政策的部分商品清单”，这个表格有3条数据
+
+
+

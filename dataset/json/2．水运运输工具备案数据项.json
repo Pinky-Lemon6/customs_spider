@@ -1,0 +1,345 @@
+[
+    {
+        "序号": 1.0,
+        "中国海关数据元名称": "船名",
+        "WCO DATA MODEL或UNTDED编号": "160 Identification of means of transport crossing the border",
+        "格式": "an..256",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 2.0,
+        "中国海关数据元名称": "中文船名",
+        "WCO DATA MODEL或UNTDED编号": "160 Identification of means of transport crossing the border",
+        "格式": "an..256",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 3.0,
+        "中国海关数据元名称": "船舶编号",
+        "WCO DATA MODEL或UNTDED编号": "167 Identification of means of transport crossing the border, coded",
+        "格式": "an..25",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 4.0,
+        "中国海关数据元名称": "船舶呼号",
+        "WCO DATA MODEL或UNTDED编号": "167 Identification of means of transport crossing the border, coded",
+        "格式": "an..25",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 5.0,
+        "中国海关数据元名称": "船旗国",
+        "WCO DATA MODEL或UNTDED编号": "175 Nationality of means of transport crossing the border, coded",
+        "格式": "a2",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 6.0,
+        "中国海关数据元名称": "船舶国籍证书编号",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 4192 Certificate.Text",
+        "格式": "an..35",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 7.0,
+        "中国海关数据元名称": "国籍证书签发日期",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 2063 Transport Means. Registration.Date Time",
+        "格式": "n8(CCYYMMDD)",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 8.0,
+        "中国海关数据元名称": "船舶建造日期",
+        "WCO DATA MODEL或UNTDED编号": "Date of Construction ",
+        "格式": "*n8(CCYYMMDD)",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 9.0,
+        "中国海关数据元名称": "船籍港代码",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 3105 Transport Means. Registration Location. Identifier",
+        "格式": "an..35",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 10.0,
+        "中国海关数据元名称": "船舶种类代码",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 8179 Type of means of transport identification",
+        "格式": "an..8",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 11.0,
+        "中国海关数据元名称": "运营性质",
+        "WCO DATA MODEL或UNTDED编号": "Liner or Tramp",
+        "格式": "*an..35",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 12.0,
+        "中国海关数据元名称": "船舶通讯号码",
+        "WCO DATA MODEL或UNTDED编号": "240 Communication number ",
+        "格式": "an..50",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 13.0,
+        "中国海关数据元名称": "船舶通讯方式类别",
+        "WCO DATA MODEL或UNTDED编号": "253 Communication number Type ",
+        "格式": "an..3",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 14.0,
+        "中国海关数据元名称": "总吨位",
+        "WCO DATA MODEL或UNTDED编号": "132 Gross Tonnage",
+        "格式": "n..14,3",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 15.0,
+        "中国海关数据元名称": "净吨位",
+        "WCO DATA MODEL或UNTDED编号": "133 Net tonnage",
+        "格式": "n..14,3",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 16.0,
+        "中国海关数据元名称": "载重吨位",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 6298 Vehicle laden weight",
+        "格式": "n..14",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 17.0,
+        "中国海关数据元名称": "船长",
+        "WCO DATA MODEL或UNTDED编号": "207 Vessel length",
+        "格式": "n..6",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 18.0,
+        "中国海关数据元名称": "船宽",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 6140 Width dimension",
+        "格式": "n..15",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 19.0,
+        "中国海关数据元名称": "船高",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 6008 Height. Measure",
+        "格式": "n..15",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 20.0,
+        "中国海关数据元名称": "船舶监管类型",
+        "WCO DATA MODEL或UNTDED编号": "type of supervision ",
+        "格式": "*an..35",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 21.0,
+        "中国海关数据元名称": "船舶运营企业编码",
+        "WCO DATA MODEL或UNTDED编号": "050 Carrier identification",
+        "格式": "an..18",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 22.0,
+        "中国海关数据元名称": "船舶运营企业英文名称",
+        "WCO DATA MODEL或UNTDED编号": "049 Carrier - name",
+        "格式": "an..256",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 23.0,
+        "中国海关数据元名称": "船舶运营企业中文名称",
+        "WCO DATA MODEL或UNTDED编号": "049 Carrier - name",
+        "格式": "an..256",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 24.0,
+        "中国海关数据元名称": "备案日期",
+        "WCO DATA MODEL或UNTDED编号": "022 Declaration issuing date",
+        "格式": "n8(CCYYMMDD)",
+        "填制条件": "必填"
+    },
+    {
+        "序号": 25.0,
+        "中国海关数据元名称": "等级号",
+        "WCO DATA MODEL或UNTDED编号": "Load classification number ",
+        "格式": "*an..20",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 26.0,
+        "中国海关数据元名称": "等级证书号",
+        "WCO DATA MODEL或UNTDED编号": "UNTDED 1004 Document. Identifier",
+        "格式": "an..35",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 27.0,
+        "中国海关数据元名称": "船体颜色",
+        "WCO DATA MODEL或UNTDED编号": "Color of ship hull",
+        "格式": "*an..10",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 28.0,
+        "中国海关数据元名称": "烟囱颜色",
+        "WCO DATA MODEL或UNTDED编号": "Color of chimney",
+        "格式": "*an..10",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 29.0,
+        "中国海关数据元名称": "电子邮件",
+        "WCO DATA MODEL或UNTDED编号": "E-mail",
+        "格式": "*an..50",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 30.0,
+        "中国海关数据元名称": "卫星电话",
+        "WCO DATA MODEL或UNTDED编号": "Satellite phone",
+        "格式": "*an..30",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 31.0,
+        "中国海关数据元名称": "马力",
+        "WCO DATA MODEL或UNTDED编号": "Horsepower ",
+        "格式": "*an..15",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 32.0,
+        "中国海关数据元名称": "船速",
+        "WCO DATA MODEL或UNTDED编号": "Ship speed",
+        "格式": "*an..15",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 33.0,
+        "中国海关数据元名称": "TPI/TPC",
+        "WCO DATA MODEL或UNTDED编号": "Tons per inch/Tons per centimetre",
+        "格式": "*an..35",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 34.0,
+        "中国海关数据元名称": "满吃水",
+        "WCO DATA MODEL或UNTDED编号": "Load draught ",
+        "格式": "*an..10",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 35.0,
+        "中国海关数据元名称": "空吃水",
+        "WCO DATA MODEL或UNTDED编号": "Light draught ",
+        "格式": "*an..10",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 36.0,
+        "中国海关数据元名称": "舱口数",
+        "WCO DATA MODEL或UNTDED编号": "Number of hatchway",
+        "格式": "*an..10",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 37.0,
+        "中国海关数据元名称": "起重设备",
+        "WCO DATA MODEL或UNTDED编号": "Lifting appliances",
+        "格式": "*an..255",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 38.0,
+        "中国海关数据元名称": "包装舱容",
+        "WCO DATA MODEL或UNTDED编号": "Bale cargo capacity ",
+        "格式": "*an..15",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 39.0,
+        "中国海关数据元名称": "散装舱容",
+        "WCO DATA MODEL或UNTDED编号": "Grain capacity ",
+        "格式": "*an..15",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 40.0,
+        "中国海关数据元名称": "舱内TEU",
+        "WCO DATA MODEL或UNTDED编号": "Twentyfoot equivalent unit inboard",
+        "格式": "*n..5",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 41.0,
+        "中国海关数据元名称": "甲板TEU",
+        "WCO DATA MODEL或UNTDED编号": "Twentyfoot equivalent unit on deck",
+        "格式": "*n..5",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 42.0,
+        "中国海关数据元名称": "船员限额",
+        "WCO DATA MODEL或UNTDED编号": "Crew quota",
+        "格式": "*n..5",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 43.0,
+        "中国海关数据元名称": "旅客限额",
+        "WCO DATA MODEL或UNTDED编号": "Passenger quota",
+        "格式": "*n..5",
+        "填制条件": "选填"
+    },
+    {
+        "序号": 44.0,
+        "中国海关数据元名称": "船舶所有人",
+        "WCO DATA MODEL或UNTDED编号": "163 Party relationship, indicator",
+        "格式": "an..34",
+        "填制条件": "选填"
+    },
+    {
+        "序号": null,
+        "中国海关数据元名称": null,
+        "WCO DATA MODEL或UNTDED编号": null,
+        "格式": null,
+        "填制条件": null
+    },
+    {
+        "序号": 45.0,
+        "中国海关数据元名称": "水上移动通信业务标识码(MMSI)",
+        "WCO DATA MODEL或UNTDED编号": "Maritime Mobile Service Identify",
+        "格式": "*an..25",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 46.0,
+        "中国海关数据元名称": "船载收发信装置SIM卡号码",
+        "WCO DATA MODEL或UNTDED编号": "Shipboard transceiver device SIM card for ships coming and going to Hong Kong or Macao",
+        "格式": "*an..16",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 47.0,
+        "中国海关数据元名称": "船载收发信装置ID号",
+        "WCO DATA MODEL或UNTDED编号": "Shipboard transceiver device ID number for ships coming and going to Hong Kong or Macao",
+        "格式": "*an..10",
+        "填制条件": "条件"
+    },
+    {
+        "序号": 48.0,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "格式": "an..512",
+        "填制条件": "选填"
+    }
+]
