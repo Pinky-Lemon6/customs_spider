@@ -1,0 +1,116 @@
+[
+    {
+        "序号":1.0,
+        "中国海关数据元名称":"关区代码",
+        "WCO DATA MODEL或UNTDED编号":"065 Office of declaration,coded",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2.0,
+        "中国海关数据元名称":"运输方式代码",
+        "WCO DATA MODEL或UNTDED编号":"T010 Mode\/type of means of transport crossing the border,coded",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3.0,
+        "中国海关数据元名称":"运单号",
+        "WCO DATA MODEL或UNTDED编号":"D023 Transport document number",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4.0,
+        "中国海关数据元名称":"车次号（航次号）",
+        "WCO DATA MODEL或UNTDED编号":"149 Conveyance reference number",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5.0,
+        "中国海关数据元名称":"理货开始时间",
+        "WCO DATA MODEL或UNTDED编号":"355 Inspection start date and\/or time",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6.0,
+        "中国海关数据元名称":"理货结束时间",
+        "WCO DATA MODEL或UNTDED编号":"356 Inspection end date and\/or time",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7.0,
+        "中国海关数据元名称":"理货部门代码",
+        "WCO DATA MODEL或UNTDED编号":"R059 Submitter,coded",
+        "填制条件":"必填"
+    },
+    {
+        "序号":8.0,
+        "中国海关数据元名称":"理货责任人名称",
+        "WCO DATA MODEL或UNTDED编号":"R020 Consignor - name",
+        "填制条件":"选填"
+    },
+    {
+        "序号":9.0,
+        "中国海关数据元名称":"装货地代码",
+        "WCO DATA MODEL或UNTDED编号":"L010 Place of loading,coded",
+        "填制条件":"--"
+    },
+    {
+        "序号":10.0,
+        "中国海关数据元名称":"卸货地代码",
+        "WCO DATA MODEL或UNTDED编号":"L013 Place of discharge,coded",
+        "填制条件":"必填"
+    },
+    {
+        "序号":11.0,
+        "中国海关数据元名称":"包装种类",
+        "WCO DATA MODEL或UNTDED编号":"141 Type of packages identification",
+        "填制条件":"条件"
+    },
+    {
+        "序号":12.0,
+        "中国海关数据元名称":"托运货物件数",
+        "WCO DATA MODEL或UNTDED编号":"146 Total number of packages",
+        "填制条件":"条件"
+    },
+    {
+        "序号":13.0,
+        "中国海关数据元名称":"货物总毛重",
+        "WCO DATA MODEL或UNTDED编号":"126 Gross weight item level",
+        "填制条件":"条件"
+    },
+    {
+        "序号":14.0,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "填制条件":"选填"
+    },
+    {
+        "序号":15.0,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "填制条件":"条件"
+    },
+    {
+        "序号":16.0,
+        "中国海关数据元名称":"集装箱（器）编号",
+        "WCO DATA MODEL或UNTDED编号":"159 Equipment identification number",
+        "填制条件":"条件"
+    },
+    {
+        "序号":17.0,
+        "中国海关数据元名称":"尺寸和类型",
+        "WCO DATA MODEL或UNTDED编号":"152 Equipment size and type identification",
+        "填制条件":"条件"
+    },
+    {
+        "序号":18.0,
+        "中国海关数据元名称":"重箱或者空箱标识代码",
+        "WCO DATA MODEL或UNTDED编号":"154 Transport equipment loaded status",
+        "填制条件":"条件"
+    },
+    {
+        "序号":19.0,
+        "中国海关数据元名称":"集装箱（器）封志类型（M|E）\/封志号@施加封志人类型",
+        "WCO DATA MODEL或UNTDED编号":"165 Seal number",
+        "填制条件":"条件"
+    }
+]

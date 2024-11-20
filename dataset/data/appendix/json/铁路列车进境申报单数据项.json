@@ -1,0 +1,240 @@
+[
+    {
+        "序号":1,
+        "中国海关数据元名称":"企业海关编号",
+        "WCO DATA MODEL或UNTDED编号":"R006 Representative person name",
+        "格式":"an..70",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"进境关区代码",
+        "WCO DATA MODEL或UNTDED编号":"065 Office of declaration,coded",
+        "格式":"an..4",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"进境口岸代码",
+        "WCO DATA MODEL或UNTDED编号":"L087 Place of departure of transit, coded",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"车次号",
+        "WCO DATA MODEL或UNTDED编号":"149 Conveyance reference number",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"航次号",
+        "WCO DATA MODEL或UNTDED编号":"149 Conveyance reference number",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"进境日期和时间",
+        "WCO DATA MODEL或UNTDED编号":"172 Date and time of arrival at first port of arrival in Customs territory",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"货\/客运类型",
+        "WCO DATA MODEL或UNTDED编号":"PassengerCargoType",
+        "格式":"*an..7",
+        "填制条件":"必填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"总车辆数",
+        "WCO DATA MODEL或UNTDED编号":"314 Boarded quantity",
+        "格式":"n..6",
+        "填制条件":"必填"
+    },
+    {
+        "序号":9,
+        "中国海关数据元名称":"旅客人数",
+        "WCO DATA MODEL或UNTDED编号":"140 Number of passengers",
+        "格式":"n..4",
+        "填制条件":"条件"
+    },
+    {
+        "序号":10,
+        "中国海关数据元名称":"国籍",
+        "WCO DATA MODEL或UNTDED编号":"T015 Nationality of means of transport used for transit, coded",
+        "格式":"a2.",
+        "填制条件":"必填"
+    },
+    {
+        "序号":11,
+        "中国海关数据元名称":"机车数",
+        "WCO DATA MODEL或UNTDED编号":"314 Boarded quantity",
+        "格式":"n..6",
+        "填制条件":"必填"
+    },
+    {
+        "序号":12,
+        "中国海关数据元名称":"机车编号",
+        "WCO DATA MODEL或UNTDED编号":"167 Identification of means of transport crossing the border, coded",
+        "格式":"an..128",
+        "填制条件":"必填"
+    },
+    {
+        "序号":13,
+        "中国海关数据元名称":"重车数",
+        "WCO DATA MODEL或UNTDED编号":"314 Boarded quantity",
+        "格式":"n..6",
+        "填制条件":"必填"
+    },
+    {
+        "序号":14,
+        "中国海关数据元名称":"空车数",
+        "WCO DATA MODEL或UNTDED编号":"314 Boarded quantity",
+        "格式":"n..6",
+        "填制条件":"必填"
+    },
+    {
+        "序号":15,
+        "中国海关数据元名称":"重箱数",
+        "WCO DATA MODEL或UNTDED编号":"150 Number of containers",
+        "格式":"n..6",
+        "填制条件":"必填"
+    },
+    {
+        "序号":16,
+        "中国海关数据元名称":"空箱数",
+        "WCO DATA MODEL或UNTDED编号":"150 Number of containers",
+        "格式":"n..6",
+        "填制条件":"必填"
+    },
+    {
+        "序号":17,
+        "中国海关数据元名称":"工作人员数",
+        "WCO DATA MODEL或UNTDED编号":"119 Number of crew",
+        "格式":"n..4",
+        "填制条件":"必填"
+    },
+    {
+        "序号":18,
+        "中国海关数据元名称":"铁路通知人",
+        "WCO DATA MODEL或UNTDED编号":" R045 Notify party",
+        "格式":"an..70",
+        "填制条件":"必填"
+    },
+    {
+        "序号":19,
+        "中国海关数据元名称":"进出境标识",
+        "WCO DATA MODEL或UNTDED编号":"IEFLAG",
+        "格式":"*an..7",
+        "填制条件":"必填"
+    },
+    {
+        "序号":20,
+        "中国海关数据元名称":"经停国境站",
+        "WCO DATA MODEL或UNTDED编号":"RoutingCountryCode",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":21,
+        "中国海关数据元名称":"客车数",
+        "WCO DATA MODEL或UNTDED编号":"150 Number of containers",
+        "格式":"n..4",
+        "填制条件":"选填"
+    },
+    {
+        "序号":22,
+        "中国海关数据元名称":"餐车数",
+        "WCO DATA MODEL或UNTDED编号":"150 Number of containers",
+        "格式":"n..4",
+        "填制条件":"选填"
+    },
+    {
+        "序号":23,
+        "中国海关数据元名称":"行李车数",
+        "WCO DATA MODEL或UNTDED编号":"150 Number of containers",
+        "格式":"n..4",
+        "填制条件":"选填"
+    },
+    {
+        "序号":24,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":25,
+        "中国海关数据元名称":"运单号",
+        "WCO DATA MODEL或UNTDED编号":"D023 Transport document number",
+        "格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":26,
+        "中国海关数据元名称":"启运地",
+        "WCO DATA MODEL或UNTDED编号":"L010 Place of loading,coded",
+        "格式":"an..17",
+        "填制条件":"必填 "
+    },
+    {
+        "序号":27,
+        "中国海关数据元名称":"到达地",
+        "WCO DATA MODEL或UNTDED编号":"L013 Place of discharge,coded",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":28,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "格式":"n..5.",
+        "填制条件":"条件"
+    },
+    {
+        "序号":29,
+        "中国海关数据元名称":"集装箱编号",
+        "WCO DATA MODEL或UNTDED编号":"159 Equipment identification number",
+        "格式":"an..17",
+        "填制条件":"条件"
+    },
+    {
+        "序号":30,
+        "中国海关数据元名称":"集装箱载货状态",
+        "WCO DATA MODEL或UNTDED编号":"154 Transport equipment loaded status",
+        "格式":"n1",
+        "填制条件":"条件"
+    },
+    {
+        "序号":31,
+        "中国海关数据元名称":"尺寸和类型",
+        "WCO DATA MODEL或UNTDED编号":"152 Equipment size and type identification",
+        "格式":"an..4",
+        "填制条件":"条件"
+    },
+    {
+        "序号":32,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "格式":"n..5.",
+        "填制条件":"条件"
+    },
+    {
+        "序号":33,
+        "中国海关数据元名称":"车号",
+        "WCO DATA MODEL或UNTDED编号":"T005 Identification of means of transport crossing the border",
+        "格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":34,
+        "中国海关数据元名称":"车辆载货状态",
+        "WCO DATA MODEL或UNTDED编号":"154 Transport equipment loaded status",
+        "格式":"n1",
+        "填制条件":"必填"
+    }
+]

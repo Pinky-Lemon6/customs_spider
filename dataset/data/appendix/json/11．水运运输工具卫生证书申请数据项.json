@@ -1,0 +1,110 @@
+[
+    {
+        "序号": 1,
+        "中国海关数据元名称": "船舶编号",
+        "WCO DATA MODEL或UNTDED编号": "167 Identification of means of transport crossing the border, coded",
+        "格式": "an..25",
+        "境内": "必填",
+        "境外": null
+    },
+    {
+        "序号": 2,
+        "中国海关数据元名称": "航次",
+        "WCO DATA MODEL或UNTDED编号": "149 Conveyance reference number",
+        "格式": "an..17",
+        "境内": "必填",
+        "境外": null
+    },
+    {
+        "序号": 3,
+        "中国海关数据元名称": "关区代码",
+        "WCO DATA MODEL或UNTDED编号": "065 Customs office of declaration, coded",
+        "格式": "an..11",
+        "境内": "必填",
+        "境外": null
+    },
+    {
+        "序号": 4,
+        "中国海关数据元名称": "免予卫生控制/卫生控制措施证书",
+        "WCO DATA MODEL或UNTDED编号": "Application for SSCEC_SSC",
+        "格式": "n..2",
+        "境内": "必填",
+        "境外": null
+    },
+    {
+        "序号": 5,
+        "中国海关数据元名称": "交通工具卫生证书",
+        "WCO DATA MODEL或UNTDED编号": "Application for sanitary certificate for conveyance",
+        "格式": "n..2",
+        "境内": "必填",
+        "境外": null
+    },
+    {
+        "序号": 6,
+        "中国海关数据元名称": "运输工具检疫证书",
+        "WCO DATA MODEL或UNTDED编号": "Application for Transport vehicle quarantine certificate",
+        "格式": "n..2",
+        "境内": "必填",
+        "境外": null
+    },
+    {
+        "序号": 7,
+        "中国海关数据元名称": "运输工具检疫处理证书",
+        "WCO DATA MODEL或UNTDED编号": "Application for TransQuaCert",
+        "格式": "n..2",
+        "境内": "必填",
+        "境外": null
+    },
+    {
+        "序号": 8,
+        "中国海关数据元名称": "船舱适载检验证书",
+        "WCO DATA MODEL或UNTDED编号": "Application for ShipCargoInspCert",
+        "格式": "n..2",
+        "境内": "必填",
+        "境外": null
+    },
+    {
+        "序号": 9,
+        "中国海关数据元名称": "申请检查时间",
+        "WCO DATA MODEL或UNTDED编号": "ApplyCheckDate",
+        "格式": "n8 (CCYYMMDD)",
+        "境内": "必填",
+        "境外": null
+    },
+    {
+        "序号": 10,
+        "中国海关数据元名称": "申报人代码",
+        "WCO DATA MODEL或UNTDED编号": " 061  Agent, coded",
+        "格式": "an..18",
+        "境内": "必填",
+        "Unnamed: 5": "必填",
+        "境外": "必填"
+    },
+    {
+        "序号": 11,
+        "中国海关数据元名称": "申报联系人姓名",
+        "WCO DATA MODEL或UNTDED编号": "246 Department or employee  contact name",
+        "格式": "an..35",
+        "境内": "选填",
+        "Unnamed: 5": "选填",
+        "境外": "选填"
+    },
+    {
+        "序号": 12,
+        "中国海关数据元名称": "申报时间",
+        "WCO DATA MODEL或UNTDED编号": "022 Declaration issuing date",
+        "格式": "n8(CCYYMMDD)",
+        "境内": "必填",
+        "Unnamed: 5": "必填",
+        "境外": "必填"
+    },
+    {
+        "序号": 13,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "格式": "an..512",
+        "境内": "选填",
+        "Unnamed: 5": "选填",
+        "境外": "选填"
+    }
+]

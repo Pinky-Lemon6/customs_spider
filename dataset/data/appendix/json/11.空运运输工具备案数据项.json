@@ -1,0 +1,317 @@
+[
+    {
+        "序号":1,
+        "中国海关数据元名称":"航空公司代码",
+        "WCO DATA MODEL或UNTDED编号":"050 Carrier identification",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"英文航空公司名称",
+        "WCO DATA MODEL或UNTDED编号":"049 Carrier - name",
+        "格式":"an..256",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"中文航空公司名称",
+        "WCO DATA MODEL或UNTDED编号":"049 Carrier - name",
+        "格式":"an..256",
+        "填制条件":"选填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"航空器注册编号",
+        "WCO DATA MODEL或UNTDED编号":"167 Identification of means of transport crossing the border, coded",
+        "格式":"an..25",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"机型",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 7242 Model number",
+        "格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"航空器国籍",
+        "WCO DATA MODEL或UNTDED编号":"175 Nationality of means of transport crossing the border, coded",
+        "格式":"a2",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"国籍证书编号",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 4192 Certificate. Text",
+        "格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"最大起飞重量",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 6298 Vehicle laden weight",
+        "格式":"n..14",
+        "填制条件":"必填"
+    },
+    {
+        "序号":9,
+        "中国海关数据元名称":"标准客舱布局载客人数",
+        "WCO DATA MODEL或UNTDED编号":"140 Number of Passengers",
+        "格式":"n..4",
+        "填制条件":"选填"
+    },
+    {
+        "序号":10,
+        "中国海关数据元名称":"航空器所有方式",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 8281  Transport Means. Ownership.Code",
+        "格式":"an..3",
+        "填制条件":"选填"
+    },
+    {
+        "序号":11,
+        "中国海关数据元名称":"交付日期",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 2001  2001 Date. Date.Date Time",
+        "格式":"an..19(CCYYMMDD)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":12,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":13,
+        "中国海关数据元名称":"航空器所有人",
+        "WCO DATA MODEL或UNTDED编号":"163 Party relationship, indicator",
+        "格式":"an..256",
+        "填制条件":"必填"
+    },
+    {
+        "序号":14,
+        "中国海关数据元名称":"航空器传输代理人代码",
+        "WCO DATA MODEL或UNTDED编号":"060 Agent - name",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":15,
+        "中国海关数据元名称":"航空器传输代理人英文名称",
+        "WCO DATA MODEL或UNTDED编号":"061 Agent, coded",
+        "格式":"an..256",
+        "填制条件":"必填"
+    },
+    {
+        "序号":16,
+        "中国海关数据元名称":"航空器传输代理人中文名称",
+        "WCO DATA MODEL或UNTDED编号":"061 Agent, coded",
+        "格式":"an..256",
+        "填制条件":"选填"
+    },
+    {
+        "序号":17,
+        "中国海关数据元名称":"航空器所有人",
+        "WCO DATA MODEL或UNTDED编号":"163 Party relationship, indicator",
+        "格式":"an..256",
+        "填制条件":"必填"
+    },
+    {
+        "序号":18,
+        "中国海关数据元名称":"所有人证件类型",
+        "WCO DATA MODEL或UNTDED编号":"170 Additional document type, coded",
+        "格式":"n..4",
+        "填制条件":"必填"
+    },
+    {
+        "序号":19,
+        "中国海关数据元名称":"所有人证件号码",
+        "WCO DATA MODEL或UNTDED编号":"003 Additional document reference number",
+        "格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":20,
+        "中国海关数据元名称":"航空器注册编号",
+        "WCO DATA MODEL或UNTDED编号":"167 Identification of means of transport crossing the border, coded",
+        "格式":"an..25",
+        "填制条件":"必填"
+    },
+    {
+        "序号":21,
+        "中国海关数据元名称":"机型",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 7242 Model number",
+        "格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":22,
+        "中国海关数据元名称":"航空器国籍",
+        "WCO DATA MODEL或UNTDED编号":"175 Nationality of means of transport crossing the border, coded",
+        "格式":"a2",
+        "填制条件":"必填"
+    },
+    {
+        "序号":23,
+        "中国海关数据元名称":"国籍证书编号",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 4192 Certificate. Text",
+        "格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":24,
+        "中国海关数据元名称":"最大起飞重量",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 6298 Vehicle laden weight",
+        "格式":"n..14",
+        "填制条件":"必填"
+    },
+    {
+        "序号":25,
+        "中国海关数据元名称":"标准客舱布局载客人数",
+        "WCO DATA MODEL或UNTDED编号":"140 Number of Passengers",
+        "格式":"n..4",
+        "填制条件":"必填"
+    },
+    {
+        "序号":26,
+        "中国海关数据元名称":"航空器所有方式",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 8281  Transport Means. Ownership.Code",
+        "格式":"an..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":27,
+        "中国海关数据元名称":"交付日期",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 2001  2001 Date. Date.Date Time",
+        "格式":"an..19(CCYYMMDD)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":28,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":29,
+        "中国海关数据元名称":"英文航空公司名称",
+        "WCO DATA MODEL或UNTDED编号":"049 Carrier - name",
+        "格式":"an..256",
+        "填制条件":"必填"
+    },
+    {
+        "序号":30,
+        "中国海关数据元名称":"中文航空公司名称",
+        "WCO DATA MODEL或UNTDED编号":"049 Carrier - name",
+        "格式":"an..256",
+        "填制条件":"选填"
+    },
+    {
+        "序号":31,
+        "中国海关数据元名称":"航空公司代码",
+        "WCO DATA MODEL或UNTDED编号":"050 Carrier identification",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":32,
+        "中国海关数据元名称":"航空器传输代理人",
+        "WCO DATA MODEL或UNTDED编号":"061 Agent, coded",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":33,
+        "中国海关数据元名称":"航空器地面代理人",
+        "WCO DATA MODEL或UNTDED编号":"061 Agent, coded",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":34,
+        "中国海关数据元名称":"航班号",
+        "WCO DATA MODEL或UNTDED编号":"149 Conveyance reference number",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":35,
+        "中国海关数据元名称":"执行任务类型",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 1507 Designated Class. Code",
+        "格式":"an..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":36,
+        "中国海关数据元名称":"航班性质",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 1507 Designated Class. Code",
+        "格式":"an..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":37,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":38,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "格式":"n..5",
+        "填制条件":"必填"
+    },
+    {
+        "序号":39,
+        "中国海关数据元名称":"出发港",
+        "WCO DATA MODEL或UNTDED编号":"212 Conveyance facility location at departure",
+        "格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":40,
+        "中国海关数据元名称":"目的港",
+        "WCO DATA MODEL或UNTDED编号":"211 Conveyance facility location at arrival",
+        "格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":41,
+        "中国海关数据元名称":"长期离港时间",
+        "WCO DATA MODEL或UNTDED编号":"209 Itinerary departure date and time",
+        "格式":"an7(HHMMZZZ)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":42,
+        "中国海关数据元名称":"长期抵港时间",
+        "WCO DATA MODEL或UNTDED编号":"208 Itinerary arrival date and time                          ",
+        "格式":"an7(HHMMZZZ)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":43,
+        "中国海关数据元名称":"有效期起始日期",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 2001 Date. Date.Date Time",
+        "格式":"an..19(CCYYMMDD)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":44,
+        "中国海关数据元名称":"有效期结束日期",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 2001 Date. Date.Date Time",
+        "格式":"an..19(CCYYMMDD)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":45,
+        "中国海关数据元名称":"每周执行情况",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "格式":"an..512",
+        "填制条件":"必填"
+    }
+]

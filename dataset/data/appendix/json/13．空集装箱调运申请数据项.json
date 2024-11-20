@@ -1,0 +1,51 @@
+[
+    {
+        "序号": null,
+        "中国海关数据元名称": null,
+        "WCO DATA MODEL或UNTDED编号": null,
+        "进口": null,
+        "出口": null
+    },
+    {
+        "序号": 1.0,
+        "中国海关数据元名称": "监管场所经营人名称",
+        "WCO DATA MODEL或UNTDED编号": "256 Representative person name",
+        "进口": "必填",
+        "出口": "必填"
+    },
+    {
+        "序号": 2.0,
+        "中国海关数据元名称": "航次航班编号",
+        "WCO DATA MODEL或UNTDED编号": "149 Conveyance reference number",
+        "进口": "必填",
+        "出口": "必填"
+    },
+    {
+        "序号": 3.0,
+        "中国海关数据元名称": "运输工具代码",
+        "WCO DATA MODEL或UNTDED编号": "167 Identification of means of transport crossing the border, coded ",
+        "进口": "必填",
+        "出口": "必填"
+    },
+    {
+        "序号": 4.0,
+        "中国海关数据元名称": "总提运单号",
+        "WCO DATA MODEL或UNTDED编号": "015 Transport document number",
+        "进口": "必填",
+        "出口": "必填"
+    },
+    {
+        "序号": 5.0,
+        "中国海关数据元名称": "申报地海关代码",
+        "WCO DATA MODEL或UNTDED编号": "065 Customs office of declaration, coded",
+        "进口": "必填",
+        "出口": "必填"
+    },
+    {
+        "序号": 6.0,
+        "中国海关数据元名称": "备注",
+        "WCO DATA MODEL或UNTDED编号": "105 Free text",
+        "进口": "选填",
+        "出口": "选填"
+    }
+]

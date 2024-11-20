@@ -1,0 +1,58 @@
+[
+    {
+        "序号":1,
+        "中国海关数据元名称":"航班号",
+        "WCO DATA MODEL或UNTDED编号":"149 Conveyance reference number",
+        "格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"航班日期",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 2280 Departure date (and time)",
+        "格式":"an..8(CCYYMMDD)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"出发港",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 3215 Place of departure, coded",
+        "格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"目的港",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 3259 Place of destination, coded",
+        "格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"计划离港时间",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 2195 Estimated time departure",
+        "格式":"an..15(CCYYMMDDHHMMZZZ)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"计划抵港时间",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 2348 Estimated arrival date (and time) at destination",
+        "格式":"an..15(CCYYMMDDHHMMZZZ)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"执行任务类型",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 1507 Designated Class. Code",
+        "格式":"an..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "格式":"an..512",
+        "填制条件":"选填"
+    }
+]

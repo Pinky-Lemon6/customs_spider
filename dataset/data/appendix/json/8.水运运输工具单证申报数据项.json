@@ -1,0 +1,737 @@
+[
+    {
+        "序号":1,
+        "中国海关数据元名称":"IMO号码",
+        "WCO DATA MODEL或UNTDED编号":"167 Identification of means of transport crossing the border, coded",
+        "WCO\\UN格式":"an..25",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"抵港\/离港状态",
+        "WCO DATA MODEL或UNTDED编号":"Arrival or departure",
+        "WCO\\UN格式":"*an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"抵港\/离港航次",
+        "WCO DATA MODEL或UNTDED编号":"149 Conveyance reference number",
+        "WCO\\UN格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"申报港口代码",
+        "WCO DATA MODEL或UNTDED编号":"082 Declaration issuing place, coded",
+        "WCO\\UN格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"船员人数",
+        "WCO DATA MODEL或UNTDED编号":"119 Number of Crew",
+        "WCO\\UN格式":"n..4",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"旅客人数",
+        "WCO DATA MODEL或UNTDED编号":"140 Number of Passengers",
+        "WCO\\UN格式":"n..4",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"载货吃水",
+        "WCO DATA MODEL或UNTDED编号":"cargo draft ",
+        "WCO\\UN格式":"*an..20",
+        "填制条件":"选填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"海关业务类型",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 9353 Government procedure,coded",
+        "WCO\\UN格式":"an..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":9,
+        "中国海关数据元名称":"来港目的",
+        "WCO DATA MODEL或UNTDED编号":"148 Purpose of call, code",
+        "WCO\\UN格式":"an..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":10,
+        "中国海关数据元名称":"船舶经营人",
+        "WCO DATA MODEL或UNTDED编号":"197 Operator of means of transport, coded",
+        "WCO\\UN格式":"an..256",
+        "填制条件":"必填"
+    },
+    {
+        "序号":11,
+        "中国海关数据元名称":"船舶经营人性质",
+        "WCO DATA MODEL或UNTDED编号":"type of ship operator",
+        "WCO\\UN格式":"*n1",
+        "填制条件":"必填"
+    },
+    {
+        "序号":12,
+        "中国海关数据元名称":"经营航线",
+        "WCO DATA MODEL或UNTDED编号":"Route",
+        "WCO\\UN格式":"*an..100",
+        "填制条件":"选填"
+    },
+    {
+        "序号":13,
+        "中国海关数据元名称":"抵\/离日期及时间",
+        "WCO DATA MODEL或UNTDED编号":"UN 2001  Date. Date.Date.Time",
+        "WCO\\UN格式":"an15(CCYYMMDDHHMMZZZ)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":14,
+        "中国海关数据元名称":"申报人代码",
+        "WCO DATA MODEL或UNTDED编号":" 061  Agent, coded",
+        "WCO\\UN格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":15,
+        "中国海关数据元名称":"申报人地址",
+        "WCO DATA MODEL或UNTDED编号":"address of declaration Enterprise  ",
+        "WCO\\UN格式":"*an..100",
+        "填制条件":"选填"
+    },
+    {
+        "序号":16,
+        "中国海关数据元名称":"申报联系人姓名",
+        "WCO DATA MODEL或UNTDED编号":"246 Department or employee  contact name",
+        "WCO\\UN格式":"an..35",
+        "填制条件":"选填"
+    },
+    {
+        "序号":17,
+        "中国海关数据元名称":"申报时间",
+        "WCO DATA MODEL或UNTDED编号":"022 Declaration issuing date",
+        "WCO\\UN格式":"n8(CCYYMMDD)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":18,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "WCO\\UN格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":1,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "WCO\\UN格式":"n..5",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"装货港代码",
+        "WCO DATA MODEL或UNTDED编号":"070 Place of loading, coded",
+        "WCO\\UN格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"卸货港代码",
+        "WCO DATA MODEL或UNTDED编号":"080 Place of discharge, coded",
+        "WCO\\UN格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"标记唛码",
+        "WCO DATA MODEL或UNTDED编号":"142 Shipping marks ",
+        "WCO\\UN格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"货物类型",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 7085 Nature of cargo, coded",
+        "WCO\\UN格式":"an..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"集装箱（器）尺寸和类型",
+        "WCO DATA MODEL或UNTDED编号":"152 Equipment size and type identification",
+        "WCO\\UN格式":"an..4",
+        "填制条件":"集装箱必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"重箱或者空箱标识代码",
+        "WCO DATA MODEL或UNTDED编号":"154 Transport equipment loaded status ",
+        "WCO\\UN格式":"n1",
+        "填制条件":"集装箱必填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"包装种类代码",
+        "WCO DATA MODEL或UNTDED编号":"141  Type of packages identification",
+        "WCO\\UN格式":"an..2",
+        "填制条件":"选填"
+    },
+    {
+        "序号":9,
+        "中国海关数据元名称":"货物数量",
+        "WCO DATA MODEL或UNTDED编号":"146 Total number of packages",
+        "WCO\\UN格式":"n..8",
+        "填制条件":"必填"
+    },
+    {
+        "序号":10,
+        "中国海关数据元名称":"货物摘要说明",
+        "WCO DATA MODEL或UNTDED编号":"Brief cargo description in the entire  ship",
+        "WCO\\UN格式":"*an..255",
+        "填制条件":"选填"
+    },
+    {
+        "序号":11,
+        "中国海关数据元名称":"毛重",
+        "WCO DATA MODEL或UNTDED编号":"131 Total gross weight",
+        "WCO\\UN格式":"n11..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":12,
+        "中国海关数据元名称":"数量单位",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 6411 Measure unit qualifier",
+        "WCO\\UN格式":"an..8",
+        "填制条件":"必填"
+    },
+    {
+        "序号":13,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "WCO\\UN格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":1,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "WCO\\UN格式":"n..5",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"物品类型",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 7357 Commodity\/rate identification",
+        "WCO\\UN格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"物品名称",
+        "WCO DATA MODEL或UNTDED编号":"Name of ship's store",
+        "WCO\\UN格式":"*an..255",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"物品数量",
+        "WCO DATA MODEL或UNTDED编号":"139 Number of packages per commodity",
+        "WCO\\UN格式":"n..8",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"数量单位",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 6411 Measure unit qualifier",
+        "WCO\\UN格式":"an..8",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"存放地点",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 8042 Stowage place onboard",
+        "WCO\\UN格式":"an..256",
+        "填制条件":"选填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "WCO\\UN格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":1,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "WCO\\UN格式":"n..5",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"姓名",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 3404 Name of person",
+        "WCO\\UN格式":"an..25",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"性别",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 3499 Gender. Code",
+        "WCO\\UN格式":"an..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"国籍",
+        "WCO DATA MODEL或UNTDED编号":"213 Nationality of the master\/operator, coded",
+        "WCO\\UN格式":"a2",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"职务",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 3480 Rank or rating of crew member",
+        "WCO\\UN格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"出生日期",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 2491 Date of birth",
+        "WCO\\UN格式":"n8(CCYYMMDD)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"出生地点",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 3486 Person. Birth Location.Text",
+        "WCO\\UN格式":"an..256",
+        "填制条件":"必填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"船员证件类型",
+        "WCO DATA MODEL或UNTDED编号":"170 Additional document type, coded",
+        "WCO\\UN格式":"an..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":9,
+        "中国海关数据元名称":"船员证件号码",
+        "WCO DATA MODEL或UNTDED编号":"003 Additional document reference number",
+        "WCO\\UN格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":10,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "WCO\\UN格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":1,
+        "中国海关数据元名称":"船员物品序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "WCO\\UN格式":"n..5",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"船员证件类型",
+        "WCO DATA MODEL或UNTDED编号":"170 Additional document type, coded",
+        "WCO\\UN格式":"an..3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"船员证件号码",
+        "WCO DATA MODEL或UNTDED编号":"003 Additional document reference number",
+        "WCO\\UN格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"物品类型",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 7357 Commodity\/rate identification",
+        "WCO\\UN格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"物品名称",
+        "WCO DATA MODEL或UNTDED编号":"Plain language description of the goods of crew ",
+        "WCO\\UN格式":"*an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"物品数量 ",
+        "WCO DATA MODEL或UNTDED编号":"139 Number of packages per commodity",
+        "WCO\\UN格式":"n..8",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"数量单位",
+        "WCO DATA MODEL或UNTDED编号":"UNTDED 6411 Measure unit qualifier",
+        "WCO\\UN格式":"an..8",
+        "填制条件":"必填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "WCO\\UN格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":1,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "WCO\\UN格式":"n..5",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"停靠港代码",
+        "WCO DATA MODEL或UNTDED编号":"044 Itinerary code",
+        "WCO\\UN格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"抵达时间",
+        "WCO DATA MODEL或UNTDED编号":"208 Itinerary arrival date and time",
+        "WCO\\UN格式":"an15(CCYYMMDDHHMMZZZ)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"驶离时间",
+        "WCO DATA MODEL或UNTDED编号":"209 Itinerary departure date and time",
+        "WCO\\UN格式":"an15(CCYYMMDDHHMMZZZ)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "WCO\\UN格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":1,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "WCO\\UN格式":"n..5",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"原进境船舶",
+        "WCO DATA MODEL或UNTDED编号":"160 Identification of means of transport crossing the border",
+        "WCO\\UN格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"原进境航次",
+        "WCO DATA MODEL或UNTDED编号":"149 Conveyance reference number",
+        "WCO\\UN格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"原进境日期",
+        "WCO DATA MODEL或UNTDED编号":"208 Itinerary arrival date and time",
+        "WCO\\UN格式":"n8(CCYYMMDD)",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"箱号",
+        "WCO DATA MODEL或UNTDED编号":"159 Equipment identification number",
+        "WCO\\UN格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"集装箱（器）尺寸和类型",
+        "WCO DATA MODEL或UNTDED编号":"152 Equipment size and type identification",
+        "WCO\\UN格式":"an..4",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"装货港代码",
+        "WCO DATA MODEL或UNTDED编号":"070 Place of loading, coded",
+        "WCO\\UN格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"卸货港代码",
+        "WCO DATA MODEL或UNTDED编号":"080 Place of discharge, coded",
+        "WCO\\UN格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":9,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "WCO\\UN格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":1,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "WCO\\UN格式":"n..5",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"提（运）单号",
+        "WCO DATA MODEL或UNTDED编号":"189 Associated transport document number",
+        "WCO\\UN格式":"an..35",
+        "填制条件":"选填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"箱号",
+        "WCO DATA MODEL或UNTDED编号":"159 Equipment identification number",
+        "WCO\\UN格式":"an..17",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"集装箱（器）尺寸和类型",
+        "WCO DATA MODEL或UNTDED编号":"152 Equipment size and type identification",
+        "WCO\\UN格式":"an..4",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"自然箱数",
+        "WCO DATA MODEL或UNTDED编号":"150 Number of containers",
+        "WCO\\UN格式":"n..6",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"铅封号",
+        "WCO DATA MODEL或UNTDED编号":"165 Seal number",
+        "WCO\\UN格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"货名",
+        "WCO DATA MODEL或UNTDED编号":"138 Brief cargo description",
+        "WCO\\UN格式":"an..256",
+        "填制条件":"必填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"毛重",
+        "WCO DATA MODEL或UNTDED编号":"131 Total gross weight",
+        "WCO\\UN格式":"n..11,3",
+        "填制条件":"必填"
+    },
+    {
+        "序号":9,
+        "中国海关数据元名称":"收货人",
+        "WCO DATA MODEL或UNTDED编号":"051 Consignee name",
+        "WCO\\UN格式":"an..256",
+        "填制条件":"选填"
+    },
+    {
+        "序号":10,
+        "中国海关数据元名称":"发货人",
+        "WCO DATA MODEL或UNTDED编号":"071 consignor-name",
+        "WCO\\UN格式":"an..256",
+        "填制条件":"选填"
+    },
+    {
+        "序号":11,
+        "中国海关数据元名称":"装货港代码",
+        "WCO DATA MODEL或UNTDED编号":"070 Place of loading, coded",
+        "WCO\\UN格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":12,
+        "中国海关数据元名称":"卸货港代码",
+        "WCO DATA MODEL或UNTDED编号":"080 Place of discharge, coded",
+        "WCO\\UN格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":13,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "WCO\\UN格式":"an..512",
+        "填制条件":"选填"
+    },
+    {
+        "序号":1,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "WCO\\UN格式":"n..5",
+        "填制条件":"必填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"转关单编号",
+        "WCO DATA MODEL或UNTDED编号":"015 Transport document number",
+        "WCO\\UN格式":"an..35",
+        "填制条件":"必填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"集装箱（器）尺寸和类型",
+        "WCO DATA MODEL或UNTDED编号":"152 Equipment size and type identification",
+        "WCO\\UN格式":"an..4",
+        "填制条件":"必填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"自然箱数",
+        "WCO DATA MODEL或UNTDED编号":"150 Number of containers",
+        "WCO\\UN格式":"n..6",
+        "填制条件":"必填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"装货港代码",
+        "WCO DATA MODEL或UNTDED编号":"070 Place of loading, coded",
+        "WCO\\UN格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"卸货港代码",
+        "WCO DATA MODEL或UNTDED编号":"080 Place of discharge, coded",
+        "WCO\\UN格式":"an..11",
+        "填制条件":"必填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "WCO\\UN格式":"an..256",
+        "填制条件":"选填"
+    },
+    {
+        "序号":1,
+        "中国海关数据元名称":"序号",
+        "WCO DATA MODEL或UNTDED编号":"006 Sequence number",
+        "WCO\\UN格式":"n..5",
+        "填制条件":"选填"
+    },
+    {
+        "序号":2,
+        "中国海关数据元名称":"提单号\/相关单证号",
+        "WCO DATA MODEL或UNTDED编号":"015 Transport document number",
+        "WCO\\UN格式":"an..35",
+        "填制条件":"选填"
+    },
+    {
+        "序号":3,
+        "中国海关数据元名称":"标记和编号\/集装箱箱号\n\/车牌号",
+        "WCO DATA MODEL或UNTDED编号":"Marks and numbers\/Container ID. NO(s).\/Vehicle REG.NO(s).",
+        "WCO\\UN格式":"*an..20",
+        "填制条件":"选填"
+    },
+    {
+        "序号":4,
+        "中国海关数据元名称":"包件的数量和种类",
+        "WCO DATA MODEL或UNTDED编号":"Number and kind of packages",
+        "WCO\\UN格式":"*an.100",
+        "填制条件":"选填"
+    },
+    {
+        "序号":5,
+        "中国海关数据元名称":"正确运输名称",
+        "WCO DATA MODEL或UNTDED编号":"Proper shipping name",
+        "WCO\\UN格式":"*an..50",
+        "填制条件":"选填"
+    },
+    {
+        "序号":6,
+        "中国海关数据元名称":"类别",
+        "WCO DATA MODEL或UNTDED编号":"Class",
+        "WCO\\UN格式":"*an..50",
+        "填制条件":"选填"
+    },
+    {
+        "序号":7,
+        "中国海关数据元名称":"联合国编号",
+        "WCO DATA MODEL或UNTDED编号":"UN number",
+        "WCO\\UN格式":"*an..50",
+        "填制条件":"选填"
+    },
+    {
+        "序号":8,
+        "中国海关数据元名称":"包件种类",
+        "WCO DATA MODEL或UNTDED编号":"Packing group",
+        "WCO\\UN格式":"*an..20",
+        "填制条件":"选填"
+    },
+    {
+        "序号":9,
+        "中国海关数据元名称":"副危险性",
+        "WCO DATA MODEL或UNTDED编号":"Subsidiary risk(s）",
+        "WCO\\UN格式":"*an..50",
+        "填制条件":"选填"
+    },
+    {
+        "序号":10,
+        "中国海关数据元名称":"闪点",
+        "WCO DATA MODEL或UNTDED编号":"Flash  point ",
+        "WCO\\UN格式":"*an..50",
+        "填制条件":"选填"
+    },
+    {
+        "序号":11,
+        "中国海关数据元名称":"是否海洋污染物",
+        "WCO DATA MODEL或UNTDED编号":"Marine pollutant ",
+        "WCO\\UN格式":"*n1",
+        "填制条件":"选填"
+    },
+    {
+        "序号":12,
+        "中国海关数据元名称":"重量（毛重\/净重）",
+        "WCO DATA MODEL或UNTDED编号":"Mass（kg),gross\/net",
+        "WCO\\UN格式":"*n..13,3",
+        "填制条件":"选填"
+    },
+    {
+        "序号":13,
+        "中国海关数据元名称":"应急措施表号",
+        "WCO DATA MODEL或UNTDED编号":"EMS",
+        "WCO\\UN格式":"*an..50",
+        "填制条件":"选填"
+    },
+    {
+        "序号":14,
+        "中国海关数据元名称":"船上积载位置",
+        "WCO DATA MODEL或UNTDED编号":"Stowage position on board",
+        "WCO\\UN格式":"*an..50",
+        "填制条件":"选填"
+    },
+    {
+        "序号":15,
+        "中国海关数据元名称":"备注",
+        "WCO DATA MODEL或UNTDED编号":"105 Free text",
+        "WCO\\UN格式":"an..255",
+        "填制条件":"选填"
+    }
+]
