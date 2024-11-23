@@ -1,8 +1,9 @@
 # Data Folder Overview
 
-This folder contains several JSON files, primarily including `regulations.json`, `results.json`, and `policy.json`. These files contain information crawled from the customs website, specifically:
+This folder contains several JSON files, primarily including `regulations.json`, `QA.json`, `results.json`, and `policy.json`. These files contain information crawled from the customs website, specifically:
 
 - **regulations.json**: Contains regulatory data, detailing the type, category, announcement number, issuing authority, issue date, effective date, status, remarks, title, and content of the regulations.
+- **QA.json**: Contains questions and answers related to customs inquiries. Each entry represents a consultation.
 - **results.json**: Contains data on collection results, recording the title and specific content of the interpretations.
 - **policy.json**: Contains policy interpretation data, recording the title and specific content of the interpretations.
 
@@ -40,6 +41,27 @@ The file `regulations.json` contains regulatory data crawled from the customs we
         "content": "为促进内港两地经济发展，方便两地经贸往来，进一步简化海关监管手续，海关总署决定进一步推进《内地海关及香港海关陆路进/出境载货清单》（以下简称《载货清单》）无纸化工作。现就有关事项公告如下：企业在向内地海关办理内地、香港陆路货运车辆（含货运空车）和所载货物各项通关监管手续时，无需提交纸质《载货清单》。《载货清单》的其他相关事项仍按照海关总署公告2004年第42号执行。本公告自2024年2月1日起施行。特此公告。海关总署2023年12月29日",
         "appendix_content":"",
         "appendix":[]
+    }
+]
+```
+
+## QA.json 
+
+The file `QA.json` contains questions and answers related to customs inquiries. The data structure is as follows:
+
+- **title**: A string, the title or subject of the inquiry.
+- **content**:A string, the specific content of the inquiry, detailing the user's question or request for information.
+- **type**:A string, the type or category of the inquiry.
+- **answer**:A string, the response to the inquiry, providing relevant information or guidance.
+
+## Example
+```json
+[
+    {
+    "title": "论文数据",
+    "content": "可以给我一份2023年的荣成苹果乳山苹果沂水苹果烟台苹果的出口量和出口金额的数据吗 非常感谢 其他品种的也可以 非常感谢",
+    "type": "其他",
+    "answer": "您好！留言收悉。现对您咨询的问题答复如下:海关统计数据在线查询可通过海关总署门户网站（www.customs.gov.cn）或者域名stats.customs.gov.cn进行查看。您也可通过海关总署门户网站-“政务公开”-“政府信息公开专栏”-“法定主动公开内容”-“海关统计”-“统计服务指南”查看并下载《统计服务申请表》，按要求填写完整后，发送至海关统计服务部门邮箱查询。感谢您对海关工作的关注与支持。"
     }
 ]
 ```
