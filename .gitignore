@@ -9,3 +9,8 @@ appendix_old.zip
 html/
 xls/
 model/
+analyze_value.py
+llama_index_test.py
+metadata_old.py
+summary_appendix.py
+update_appendix.py
