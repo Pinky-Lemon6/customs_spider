@@ -9,7 +9,6 @@ This folder contains several JSON files, primarily including `regulations.json`,
 
 These data can be used for analysis and research on customs-related regulations and policies.
 
-
 ## regulations.json
 The file `regulations.json` contains regulatory data crawled from the customs website. The data structure is as follows:
 - **document_type**: A string, the type of the regulation.
@@ -94,3 +93,79 @@ The file `policys.json` contains the interpretation result data. The data struct
     }
 ]
 ```
+
+
+
+# Dataset Updates
+In order to facilitate further classification and vectorization of data, the `metadata` field is added to the two datasets `regulations.json` and `QA.json` on the basis of the original dataset. This field consists of a series of metadata of the content in the dataset. The new datasets are: `regulations_with_metadata.json` and `QA_with_metadata.json`, which are described as follows:
+
+## regulations_with_matadata.json
+The newly added `metadata` field is a dictionary containing the following fields:
+- **topic**: A list, contains the topics of the regulation content.
+- **laws**: A list, contains the relevant laws and regulations.
+- **industries_or_products**: A list, contains industries or products covered by the regulation.
+- **scope_or_region**: A list, contains the areas or regions to which the regulation applies.
+- **relevant_documents**: A list, contains documents mentioned in the regulatory notice.
+- **operation**: A list, contains the operations or processes covered in the regulatory announcement.
+
+## Example
+```json
+"metadata": {
+            "topic": [
+                "加工贸易",
+                "内销",
+                "集中办理",
+                "纳税"
+            ],
+            "laws": [
+                "《中华人民共和国海关对加工贸易货物监管办法》"
+            ],
+            "industries_or_products": [
+                "加工贸易"
+            ],
+            "scope_or_region": [
+                "全国"
+            ],
+            "relevant_documents": [
+                "集中办理内销纳税手续情况表",
+                "集中办理内销纳税手续发货记录单"
+            ],
+            "operation": [
+                "内销集中办理纳税手续"
+            ]
+        }
+```
+## QA_with_matadata.json
+The newly added `metadata` field is a dictionary containing the following fields:
+- **topic**: A list, contains the topics of the Q&A.
+- **laws**: A stirng, contains the relevant laws of the Q&A.
+- **industries_or_products**: A list, contains industries or products covered in the Q&A.
+- **scope_or_region**: A list, contains the areas or regions covered in the Q&A.
+- **institutions**: A list, contains the organizations mentioned in the Q&A.
+- **operation**: A list, contains the operations or processes covered in the Q&A.
+
+## Example
+```json
+"metadata": {
+            "topic": [
+                "保健食品",
+                "境外生产企业",
+                "注册备案"
+            ],
+            "laws": "《中华人民共和国进口食品境外生产企业注册管理规定》",
+            "industries_or_products": [
+                "保健食品"
+            ],
+            "scope_or_region": [
+                "中国澳门"
+            ],
+            "institutions": [
+                "海关总署",
+                "拱北海关"
+            ],
+            "operation": [
+                "官方推荐注册"
+            ]
+        }
+```
+
