@@ -11,6 +11,7 @@ These data can be used for analysis and research on customs-related regulations 
 
 ## regulations.json
 The file `regulations.json` contains regulatory data crawled from the customs website. The data structure is as follows:
+- **text_id**: A number, the id of the text.
 - **document_type**: A string, the type of the regulation.
 - **category**: A string, the type of the regulation.
 - **announcement_number**: A string, the announcement_number of the regulation.
@@ -28,6 +29,7 @@ The file `regulations.json` contains regulatory data crawled from the customs we
 ```json
 [
     {
+        "text_id": 0,
         "document_type": "海关规范性文件",
         "category": "其他",
         "announcement_number": "公告〔2023〕199号",
@@ -47,7 +49,7 @@ The file `regulations.json` contains regulatory data crawled from the customs we
 ## QA.json 
 
 The file `QA.json` contains questions and answers related to customs inquiries. The data structure is as follows:
-
+- **text_id**: A number, the id of the text.
 - **title**: A string, the title or subject of the inquiry.
 - **content**:A string, the specific content of the inquiry, detailing the user's question or request for information.
 - **type**:A string, the type or category of the inquiry.
@@ -57,10 +59,11 @@ The file `QA.json` contains questions and answers related to customs inquiries. 
 ```json
 [
     {
-    "title": "论文数据",
-    "content": "可以给我一份2023年的荣成苹果乳山苹果沂水苹果烟台苹果的出口量和出口金额的数据吗 非常感谢 其他品种的也可以 非常感谢",
-    "type": "其他",
-    "answer": "您好！留言收悉。现对您咨询的问题答复如下:海关统计数据在线查询可通过海关总署门户网站（www.customs.gov.cn）或者域名stats.customs.gov.cn进行查看。您也可通过海关总署门户网站-“政务公开”-“政府信息公开专栏”-“法定主动公开内容”-“海关统计”-“统计服务指南”查看并下载《统计服务申请表》，按要求填写完整后，发送至海关统计服务部门邮箱查询。感谢您对海关工作的关注与支持。"
+        "text_id": 0,
+        "title": "论文数据",
+        "content": "可以给我一份2023年的荣成苹果乳山苹果沂水苹果烟台苹果的出口量和出口金额的数据吗 非常感谢 其他品种的也可以 非常感谢",
+        "type": "其他",
+        "answer": "您好！留言收悉。现对您咨询的问题答复如下:海关统计数据在线查询可通过海关总署门户网站（www.customs.gov.cn）或者域名stats.customs.gov.cn进行查看。您也可通过海关总署门户网站-“政务公开”-“政府信息公开专栏”-“法定主动公开内容”-“海关统计”-“统计服务指南”查看并下载《统计服务申请表》，按要求填写完整后，发送至海关统计服务部门邮箱查询。感谢您对海关工作的关注与支持。"
     }
 ]
 ```
