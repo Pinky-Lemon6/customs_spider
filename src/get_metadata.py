@@ -85,10 +85,14 @@ def process_text(text, max_length=512, llm_model="gpt-4", llm_max_tokens=512,tas
     metadata = extract_json_from_response(response_content)
     return metadata
 
+
+
 # 定义函数：处理单条文本的线程
 def process_single_text(idx, text, max_length, llm_model, task='QA'):
     print(f"Processing {idx+1}...")
     return process_text(text, max_length=max_length, llm_model=llm_model, task=task)
+
+
 
 # 修改批量处理文本函数以支持多线程
 def process_texts_from_file(input_file, output_file, max_length=512, llm_model="gpt-4",task='QA'):
@@ -131,7 +135,7 @@ def process_texts_from_file(input_file, output_file, max_length=512, llm_model="
     
 # 主程序
 if __name__ == "__main__":
-    llm_model = "qwen-plus"
+    llm_model = "qwen-plus-latest"
     # 处理QA数据
     input_file = r'./dataset/data/QA.json'  
     output_file = "metadata_QA.json"  
